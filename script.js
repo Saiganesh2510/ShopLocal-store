@@ -16,6 +16,10 @@ container.innerHTML=""
 
 products.forEach(p=>{
 
+let cartItem=cart.find(c=>c.id===p.id)
+
+let qty=cartItem ? cartItem.qty : 0
+
 container.innerHTML+=`
 
 <div class="product">
@@ -26,90 +30,167 @@ container.innerHTML+=`
 
 <p>₹${p.price}</p>
 
-<button onclick="addToCart(${p.id})">Add</button>
+<p>Stock: ${p.stock}</p>
+<div class="qty-controls">
+
+<button onclick="changeQty(${p.id},-1)">-</button>
+
+<span>${qty}</span>
+
+<button onclick="changeQty(${p.id},1)">+</button>
+<br>
+<button onclick="addToCart(${p.id})">Add to Cart</button>
+</div>
 
 </div>
 
 `
 
 })
-
-}
-
-function addToCart(id){
-
-let product=products.find(p=>p.id===id)
-
-let item=cart.find(c=>c.id===id)
-
-if(item){
-item.qty++
-}else{
-cart.push({...product,qty:1})
-}
-
-displayCart()
-
-}
-
-function displayCart(){
-
-let div=document.getElementById("cart")
-
-div.innerHTML=""
-
-let total=0
-
-cart.forEach(item=>{
-
-let price=item.qty*item.price
-
-total+=price
-
-div.innerHTML+=`
-
-<div class="cart-item">
-
-<img src="${item.image}">
-
-${item.name}
-
-<div class="qty">
-
-<button onclick="changeQty(${item.id},-1)">-</button>
-
-${item.qty}
-
-<button onclick="changeQty(${item.id},1)">+</button>
-
-</div>
-
-₹${price}
-
-</div>
-
-`
-
-})
-
-document.getElementById("total").innerText=total
 
 }
 
 function changeQty(id,change){
 
-let item=cart.find(c=>c.id===id)
+    let product=products.find(p=>p.id===id)
+    
+    let item=cart.find(c=>c.id===id)
+    
+    if(change>0){
+    
+    if(product.stock<=0){
+    
+    alert("Out of stock")
+    
+    return
+    
+    }
+    
+    product.stock--
+    
+    if(item){
+    item.qty++
+    }else{
+    cart.push({...product,qty:1})
+    }
+    
+    }
+    
+    if(change<0 && item){
+    
+    item.qty--
+    
+    product.stock++
+    
+    if(item.qty<=0){
+    
+    cart=cart.filter(c=>c.id!==id)
+    
+    }
+    
+    }
+    
+    displayProducts()
+    
+    displayCart()
+    
+    }
+    
+    function displayCart(){
+    
+    let div=document.getElementById("cart")
+    
+    div.innerHTML=""
+    
+    let total=0
+    
+    cart.forEach(item=>{
+    
+    total+=item.price*item.qty
+    
+    div.innerHTML+=`
+    
+    <p>
+    
+    ${item.name} x${item.qty}
+    
+    ₹${item.price*item.qty}
+    
+    </p>
+    
+    `
+    
+    })
+    
+    document.getElementById("total").innerText=total
+    
+    }
+    function displayCart(){
 
-item.qty+=change
+        let div=document.getElementById("cart")
+        
+        div.innerHTML=""
+        
+        let total=0
+        
+        cart.forEach(item=>{
+        
+        let price=item.qty*item.price
+        
+        total+=price
+        
+        div.innerHTML+=`
+        
+        <div class="cart-item">
+        
+        <img src="${item.image}">
+        
+        ${item.name}
+        
+        <div class="qty">
+        
+        <button onclick="changeQty(${item.id},-1)">-</button>
+        
+        ${item.qty}
+        
+        <button onclick="changeQty(${item.id},1)">+</button>
+        
+        </div>
+        
+        ₹${price}
+        
+        </div>
+        
+        `
+        
+        })   
+        document.getElementById("total").innerText = total
 
-if(item.qty<=0){
-cart=cart.filter(c=>c.id!==id)
-}
+    }
+    
+    function addToCart(id){
 
-displayCart()
-
-}
-
+        let product = products.find(p=>p.id===id)
+        
+        let item = cart.find(c=>c.id===id)
+        
+        if(product.stock <= 0){
+        alert("Out of stock")
+        return
+        }
+        
+        product.stock--
+        
+        if(item){
+        item.qty++
+        }else{
+        cart.push({...product, qty:1})
+        }
+        
+        displayProducts()   // refresh product cards
+        displayCart()
+        
+        }
 async function confirmOrder(){
 
     if(cart.length==0){
