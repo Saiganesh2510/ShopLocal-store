@@ -191,6 +191,7 @@ function changeQty(id,change){
         displayCart()
         
         }
+
 async function confirmOrder(){
 
     if(cart.length==0){
