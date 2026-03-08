@@ -234,12 +234,16 @@ window.open(url)
 
 function downloadReceipt(text){
 
-let blob=new Blob([text],{type:"text/plain"})
+let blob=new Blob([text],{
+type:"text/plain;charset=utf-8"
+})
 
 let a=document.createElement("a")
 
 a.href=URL.createObjectURL(blob)
+
 a.download="receipt.txt"
+
 a.click()
 
 }
