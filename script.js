@@ -42,18 +42,16 @@ ${p.mrp ? `<span class="mrp">₹${p.mrp}</span>` : ``}
 </p>
 
 <p>Stock: ${p.stock}</p>
-
+<button onclick="addToCart(${p.id})">Add to Cart</button>
 <div class="qty-controls">
-
-<button onclick="changeQty(${p.id},-1)">-</button>
-
-<span>${qty}</span>
 
 <button onclick="changeQty(${p.id},1)">+</button>
 
-</div>
+<span>${qty}</span>
 
-<button onclick="addToCart(${p.id})">Add to Cart</button>
+<button onclick="changeQty(${p.id},-1)">-</button>
+
+</div>
 
 </div>
 
