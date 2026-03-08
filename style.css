@@ -4,6 +4,8 @@ body{
     background:#f2f2f2;
     }
     
+    /* HEADER */
+    
     header{
     position:sticky;
     top:0;
@@ -11,66 +13,150 @@ body{
     color:white;
     text-align:center;
     padding:15px;
+    z-index:100;
     }
+    
+    /* STORE LAYOUT */
     
     .store{
     display:flex;
-    height:90vh;
+    min-height:90vh;
     }
     
+    /*PRICE FILTER*/
+    .price{
+        margin:8px 0;
+        font-size:18px;
+        }
+        
+        .our-price{
+        font-weight:bold;
+        font-size:22px;
+        color:#2c3e50;
+        margin-right:10px;
+        }
+        
+        .mrp{
+        text-decoration:line-through;
+        color:#888;
+        font-size:16px;
+        }
+        
+        .discount-badge{
+        position:absolute;
+        top:10px;
+        left:10px;
+        background:#4b6cb7;
+        color:white;
+        padding:6px 10px;
+        font-size:14px;
+        border-radius:6px;
+        font-weight:bold;
+        }
+        
+        .product{
+        position:relative;
+        }
+
+
     /* PRODUCT GRID */
     
     .products{
-    flex:3;
+    flex:1;
     padding:20px;
-    overflow:auto;
-
     }
     
     #products{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
     gap:15px;
     }
     
     .product{
-    background:white;
-    padding:10px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 5px rgba(0,0,0,0.2);
-    }
+        background:white;
+        padding:15px;
+        border-radius:10px;
+        text-align:center;
+        box-shadow:0 2px 6px rgba(0,0,0,0.15);
+        }
     
     .product img{
-    width:100px;
-    height:100px;
-    object-fit:cover;
+        width:180px;
+        height:180px;
+        object-fit:cover;
+        margin-bottom:10px;
+        }
+    
+    .product h3{
+    font-size:15px;
+    margin:8px 0;
     }
     
     .product button{
-    background:#27ae60;
+        background:#27ae60;
+        color:white;
+        border:none;
+        padding:10px 16px;
+        font-size:16px;
+        border-radius:6px;
+        cursor:pointer;
+        margin-top:8px;
+        width:100%;
+        }
+    
+    /* QTY CONTROLS */
+    
+    .qty-controls{
+    margin-top:5px;
+    }
+    
+    .qty-controls button{
+        margin:0 4px;
+        padding:8px 14px;
+        font-size:18px;
+        border-radius:6px;
+        background:#27ae60;
+        color:white;
+        border:none;
+        cursor:pointer;
+        }
+    
+    /* CART BUTTON */
+    
+    .cart-btn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    background:#ff9800;
     color:white;
     border:none;
-    padding:6px 10px;
-    margin-top:5px;
+    padding:10px 16px;
+    font-size:15px;
+    border-radius:8px;
     cursor:pointer;
+    z-index:1000;
     }
     
     /* CART PANEL */
     
-    .cart{
-    flex:1;
-    background:white;
-    padding:20px;
-    border-left:2px solid #ddd;
-    display:flex;
-    flex-direction:column;
-    }
-    
-    #cart{
-        max-height:400px;
+    .cart-panel{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:320px;
+        max-width:90%;
+        height:100%;
+        background:white;
+        box-shadow:-3px 0 10px rgba(0,0,0,0.2);
+        padding:20px;
         overflow-y:auto;
-    }
+        transition:0.3s;
+        z-index:999;
+        }
+        
+        .cart-panel.open{
+        right:0;
+        }
     
     .cart-item{
     display:flex;
@@ -97,11 +183,153 @@ body{
     padding:2px 6px;
     }
     
-    button{
-        padding:8px 12px;
-        background:#27ae60;
+    /* CONFIRM BUTTON */
+    
+    .confirm-btn{
+        width:100%;
+        padding:12px;
+        background:#28a745;
         color:white;
         border:none;
+        border-radius:8px;
         cursor:pointer;
-        margin:5px;
+        margin-top:20px;
+        margin-bottom:15px;
+        font-size:18px;
+        font-weight:bold;
         }
+    
+    .close-cart{
+        display:block;
+        margin:25px auto 0 auto;   /* center + space from confirm button */
+        background:#e53935;
+        color:white;
+        border:none;
+        padding:14px 26px;
+        font-size:20px;
+        font-weight:bold;
+        border-radius:10px;
+        cursor:pointer;
+        width:80px;
+        text-align:center;
+        }
+        
+        .close-cart:hover{
+        background:#c62828;
+        }
+    /* FOOTER */
+    
+    .footer{
+    background:#111;
+    color:#fff;
+    padding:40px 20px;
+    margin-top:50px;
+    }
+    
+    .footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    }
+    
+    .footer-col h3{
+    margin-bottom:15px;
+    font-size:18px;
+    border-bottom:2px solid #ff9900;
+    display:inline-block;
+    padding-bottom:5px;
+    }
+    
+    .footer-col p{
+    font-size:14px;
+    margin-bottom:8px;
+    }
+    
+    .footer-col ul{
+    list-style:none;
+    padding:0;
+    }
+    
+    .footer-col ul li{
+    margin-bottom:8px;
+    }
+    
+    .footer-col ul li a{
+    text-decoration:none;
+    color:#ccc;
+    }
+    
+    .footer-col ul li a:hover{
+    color:#ff9900;
+    }
+    
+    .social-icons a{
+    margin-right:12px;
+    font-size:20px;
+    color:white;
+    }
+    
+    .social-icons a:hover{
+    color:#ff9900;
+    }
+    
+    .footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    padding-top:15px;
+    border-top:1px solid #333;
+    font-size:14px;
+    color:#bbb;
+    }
+    
+    /* MOBILE VIEW */
+    
+    @media (max-width:768px){
+    
+    #products{
+    grid-template-columns:repeat(2,1fr);
+    }
+    
+    .product img{
+    width:80px;
+    height:80px;
+    }
+    
+    .cart-panel{
+    width:100%;
+    }
+    
+    }
+
+    @media (max-width:768px){
+
+.cart-panel{
+width:85%;
+right:-100%;
+}
+
+.cart-panel.open{
+right:0;
+}
+
+}
+@media (max-width:768px){
+
+    .product img{
+    width:160px;
+    height:160px;
+    }
+    
+    .qty-controls button{
+    padding:8px 12px;
+    font-size:16px;
+    }
+    
+    .product button{
+    padding:10px;
+    font-size:15px;
+    }
+    
+    }
