@@ -18,9 +18,9 @@ products.forEach(p=>{
 let cartItem=cart.find(c=>c.id===p.id)
 let qty=cartItem ? cartItem.qty : 0
 
-let discount = 0
+let discount=0
 if(p.mrp){
-discount = Math.round(((p.mrp - p.price) / p.mrp) * 100)
+discount=Math.round(((p.mrp-p.price)/p.mrp)*100)
 }
 
 container.innerHTML+=`
@@ -34,30 +34,23 @@ ${p.mrp ? `<div class="discount-badge">${discount}% off</div>` : ``}
 <h3>${p.name}</h3>
 
 <p class="price">
-
 <span class="our-price">₹${p.price}</span>
-
 ${p.mrp ? `<span class="mrp">₹${p.mrp}</span>` : ``}
-
 </p>
 
 <p>Stock: ${p.stock}</p>
+
 <button onclick="addToCart(${p.id})">Add to Cart</button>
+
 <div class="qty-controls">
-
 <button onclick="changeQty(${p.id},1)">+</button>
-
 <span>${qty}</span>
-
 <button onclick="changeQty(${p.id},-1)">-</button>
-
 </div>
 
 </div>
-
 `
 })
-
 }
 
 function changeQty(id,change){
@@ -79,7 +72,6 @@ item.qty++
 }else{
 cart.push({...product,qty:1})
 }
-
 }
 
 if(change<0 && item){
@@ -90,12 +82,10 @@ product.stock++
 if(item.qty<=0){
 cart=cart.filter(c=>c.id!==id)
 }
-
 }
 
 displayProducts()
 displayCart()
-
 }
 
 function addToCart(id){
@@ -118,7 +108,6 @@ cart.push({...product, qty:1})
 
 displayProducts()
 displayCart()
-
 }
 
 function displayCart(){
@@ -142,26 +131,19 @@ div.innerHTML+=`
 ${item.name}
 
 <div class="qty">
-
 <button onclick="changeQty(${item.id},-1)">-</button>
-
 ${item.qty}
-
 <button onclick="changeQty(${item.id},1)">+</button>
-
 </div>
 
 ₹${price}
 
 </div>
-
 `
-
 })
 
-document.getElementById("total").innerText = total
+document.getElementById("total").innerText=total
 updateCartCount()
-
 }
 
 function updateCartCount(){
@@ -173,7 +155,6 @@ count+=item.qty
 })
 
 document.getElementById("cart-count").innerText=count
-
 }
 
 function toggleCart(){
@@ -182,46 +163,42 @@ document.getElementById("cart-panel").classList.toggle("open")
 
 function confirmOrder(){
 
-if(cart.length==0){
-alert("Cart empty")
-return
-}
-
-let total=document.getElementById("total").innerText
-
-let now=new Date()
-
-let date=now.toLocaleDateString()
-let time=now.toLocaleTimeString()
-
-let receipt=`${date} ${time}    Bill\n\n`
-
-receipt+=`Ramadevi Kiranam & General Store\n\n`
-
-receipt+="Product                     Qty   Rate   Price\n"
-receipt+="------------------------------------------------\n"
-
-cart.forEach(item=>{
-
-let price=item.price*item.qty
-
-let name=item.name.padEnd(26," ")
-let qty=String(item.qty).padEnd(5," ")
-let rate=("₹"+item.price).padEnd(7," ")
-let priceText="₹"+price
-
-receipt+=`${name}${qty}${rate}${priceText}\n`
-
-})
-
-receipt+="------------------------------------------------\n\n"
-receipt+=`Total ₹${total}`
-
-downloadReceipt(receipt)
-sendWhatsApp(receipt)
-
-}
-
+    if(cart.length==0){
+    alert("Cart empty")
+    return
+    }
+    
+    let now=new Date()
+    
+    let date=now.toLocaleDateString()
+    let time=now.toLocaleTimeString()
+    
+    let receipt=`${date} ${time}  Bill\n\n`
+    
+    receipt+=`Ramadevi Kiranam & General Store(Wholesale)\n\n`
+    
+    let i=1
+    let total=0
+    
+    cart.forEach(item=>{
+    
+    let price=item.price*item.qty
+    total+=price
+    
+    receipt+=`${i}. ${item.name}\n`
+    receipt+=`   Qty: ${item.qty}  Rate: ₹${item.price}  Price: ₹${price}\n\n`
+    
+    i++
+    
+    })
+    
+    receipt+=`Total ₹${total}`
+    
+    sendWhatsApp(receipt)
+    
+    downloadPDF()
+    
+    }
 function sendWhatsApp(message){
 
 let phone="918520896231"
@@ -229,21 +206,67 @@ let phone="918520896231"
 let url=`https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
 window.open(url)
-
 }
 
-function downloadReceipt(text){
+function downloadPDF(){
 
-let blob=new Blob([text],{
-type:"text/plain;charset=utf-8"
+const { jsPDF } = window.jspdf
+
+let doc=new jsPDF()
+
+let y=20
+
+let now=new Date()
+let date=now.toLocaleDateString()
+let time=now.toLocaleTimeString()
+
+doc.setFont("Arial","normal")
+
+doc.setFontSize(10)
+doc.text(`${date}  ${time}`,10,y)
+
+doc.setFontSize(18)
+doc.text("Ramadevi Kiranam & General Store\nWholeSale",105,30,{align:"center"})
+
+y=50
+
+doc.setFontSize(10)
+
+doc.text("S.No",10,y)
+doc.text("Product",25,y)
+doc.text("Qty",125,y)
+doc.text("Rate",145,y)
+doc.text("Price",170,y)
+
+y+=5
+doc.line(10,y,200,y)
+
+y+=10
+
+let total=0
+let i=1
+
+cart.forEach(item=>{
+
+let price=item.price*item.qty
+total+=price
+
+doc.text(String(i),10,y)
+doc.text(item.name.substring(0,30),25,y)
+doc.text(String(item.qty),125,y)
+doc.text("Rs."+item.price,145,y)
+doc.text("Rs."+price,170,y)
+
+y+=10
+i++
 })
 
-let a=document.createElement("a")
+doc.line(10,y,200,y)
 
-a.href=URL.createObjectURL(blob)
+y+=10
 
-a.download="receipt.txt"
+doc.setFontSize(14)
+doc.text(`Total Rs.${total}`,140,y)
 
-a.click()
-
+doc.save("Your_Order_summary.pdf")
 }
