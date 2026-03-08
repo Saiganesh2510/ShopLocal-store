@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Ramadevi Kiranam Store</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -13,31 +20,163 @@
 
 </header>
 
+
+<!-- STORE SECTION -->
+
 <div class="store">
 
-    <!-- LEFT PRODUCT GRID -->
-    <div class="products">
-    
-    <div id="products"></div>
-    
-    </div>
-    
-    <!-- RIGHT CART -->
-    <div class="cart">
-    
-    <h2>Cart</h2>
-    
-    <div id="cart"></div>
-    
-    <h2>Total ₹<span id="total">0</span></h2>
-    
-    <button onclick="confirmOrder()">Confirm Order</button>
-    
-    </div>
-    
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="script.js"></script>
-    
-    </body>
-    </html>
+<!-- PRODUCT GRID -->
+
+<div class="products">
+
+<div id="products"></div>
+
+</div>
+
+</div>
+
+
+<!-- CART BUTTON -->
+
+<button class="cart-btn" onclick="toggleCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</button>
+
+
+<!-- CART PANEL -->
+
+<div class="cart-panel" id="cart-panel">
+
+<h2>Cart</h2>
+
+<div id="cart"></div>
+
+<h2>Total ₹<span id="total">0</span></h2>
+
+<button onclick="confirmOrder()" class="confirm-btn">
+Confirm Order
+</button>
+<button class="close-cart" onclick="toggleCart()">✖</button>
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- Store Info -->
+
+<div class="footer-col">
+<h3>Ramadevi Store</h3>
+
+<p>Your one-stop shop for quality products at the best prices.</p>
+
+<p>📍 NewShayampet, Hanamkonda, Telangana</p>
+
+<p>📞 +91 8520896231</p>
+
+<p>📧 saiganeshdharna@gmail.com</p>
+
+</div>
+
+
+<!-- Shop -->
+
+<div class="footer-col">
+
+<h3>Shop</h3>
+
+<ul>
+<li><a href="#">Groceries</a></li>
+<li><a href="#">Snacks</a></li>
+<li><a href="#">Beverages</a></li>
+<li><a href="#">Household</a></li>
+<li><a href="#">Daily Essentials</a></li>
+</ul>
+
+</div>
+
+
+<!-- Customer Service -->
+
+<div class="footer-col">
+
+<h3>Customer Service</h3>
+
+<ul>
+<li><a href="#">My Orders</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="#">Return Policy</a></li>
+<li><a href="#">Help Center</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+
+</div>
+
+
+<!-- Social -->
+
+<div class="footer-col">
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/saiganeshdharna" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/SaiganeshDharna" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="https://github.com/Saiganesh2510" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://twitter.com/@saiganeshdharna" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Saiganesh Dharna. All rights reserved.
+</div>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+
+<script>
+
+// Smooth scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+anchor.addEventListener('click', function(e){
+
+e.preventDefault()
+
+document.querySelector(this.getAttribute('href'))
+.scrollIntoView({behavior:'smooth'})
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
