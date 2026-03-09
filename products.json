@@ -143,4 +143,20 @@
     "image": "https://cdn.quicksell.co/-Mj5BUyTtyTgI5aqzZnV/products_400/-Of4_CkQEoCfGrBTGkv0.jpg",
     "stock": 5
   }
+  {
+        "id":1772803503520.2077,
+        "name":"Thums Up Soft Drink, 2.25 L",
+        "price":85,
+        "mrp":100,
+        "image":"https://www.bbassets.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg"
+        "stock": 24
+    },
+    {
+        "id":1772803503520.2078,
+        "name":"Sprite Soft Drink, 2.25 L",
+        "price":85,
+        "mrp":100,
+        "image":"https://m.media-amazon.com/images/I/51WRz+hQvHL._SX679_.jpg"
+      "stock": 24
+    }
 ]
