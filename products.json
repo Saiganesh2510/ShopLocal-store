@@ -148,7 +148,7 @@
         "name":"Thums Up Soft Drink, 2.25 L",
         "price":85,
         "mrp":100,
-        "image":"https://www.bbassets.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg"
+        "image":"https://www.bbassets.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg",
         "stock": 24
     },
     {
@@ -156,7 +156,7 @@
         "name":"Sprite Soft Drink, 2.25 L",
         "price":85,
         "mrp":100,
-        "image":"https://m.media-amazon.com/images/I/51WRz+hQvHL._SX679_.jpg"
+      "image":"https://m.media-amazon.com/images/I/51WRz+hQvHL._SX679_.jpg",
       "stock": 24
     }
 ]
