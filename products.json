@@ -144,24 +144,24 @@
     "stock": 5
   },
   {
-    "id": 1773044031535,
-    "name": "Thums Up Soft Drink, 2.25",
-    "price": 85,
-    "mrp": 100,
-    "image": "https://www.bbassets.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg",
-    "stock": 20
+    "id": 1773055288965,
+    "name": "Krazy park Biscuit 5Rs(Pack of 12)",
+    "price": 50,
+    "mrp": 60,
+    "image": "https://static.wixstatic.com/media/d0ef24_6e8fd8b459254fb8920c32055bdae668~mv2.jpg/v1/fill/w_280,h_231,q_90,enc_avif,quality_auto/d0ef24_6e8fd8b459254fb8920c32055bdae668~mv2.jpg",
+    "stock": 10
   },
   {
-    "id": 1773044057646,
-    "name": "Sprite Up Soft Drink, 2.25",
-    "price": 85,
-    "mrp": 100,
-    "image": "https://m.media-amazon.com/images/I/51WRz+hQvHL._SX679_.jpg",
-    "stock": 20
+    "id":1772803503520.0225,
+    "name":"Buy Marie Munch Biscuit Mrp 5/-",
+    "price":50,
+    "mrp": 60,
+    "image":"https://dukaan.b-cdn.net/700x700/webp/112370/fee126be-9252-432d-ae53-90fdd110541c.png",
+      "stock": 10
   },
   {
     "id": 1773053482533,
-    "name": "GoodDay Biscuits â‚¹5(12pcs)",
+    "name": "GoodDay Biscuits 5/-(12pcs)",
     "price": 55,
     "mrp": 60,
     "image": "https://hbkirana.in/wp-content/uploads/2025/03/image_19_z4kx-rb_1920x.jpg",
@@ -182,6 +182,22 @@
     "mrp": 60,
     "image": "https://www.bbassets.com/media/uploads/p/l/40001672_14-britannia-marie-gold-biscuits-light-crisp-tea-time-snack-no-trans-fat.jpg",
     "stock": 24
+  },
+  {
+    "id": 1773044031535,
+    "name": "Thums Up Soft Drink, 2.25",
+    "price": 85,
+    "mrp": 100,
+    "image": "https://www.bbassets.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg",
+    "stock": 20
+  },
+  {
+    "id": 1773044057646,
+    "name": "Sprite Up Soft Drink, 2.25",
+    "price": 85,
+    "mrp": 100,
+    "image": "https://m.media-amazon.com/images/I/51WRz+hQvHL._SX679_.jpg",
+    "stock": 20
   },
   {
     "id": 1773054476229,
