@@ -15,14 +15,29 @@ body{
     padding:15px;
     z-index:100;
     }
-    
+    .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
     /* STORE LAYOUT */
     
     .store{
     display:flex;
     min-height:90vh;
     }
-    
+    .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
     /*PRICE FILTER*/
     .price{
         margin:8px 0;
