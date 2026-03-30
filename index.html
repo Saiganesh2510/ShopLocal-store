@@ -14,12 +14,19 @@
 
 <body>
 
-    <header class="header">
-        <div class="logo-container">
-          <img src=https://img.sanishtech.com/u/be35f8abd62fa57be799c16137ccb763.jpeg alt="Dharna Enterprises Logo" class="logo">
-          <h1>Dharna Enterprises</h1>
-        </div>
-    </header>
+  <header class="fk-header">
+
+    <!-- TOP BAR -->
+    <div class="fk-top">
+  
+      <img src="https://img.sanishtech.com/u/7329027bc0cc74f5c6e6d42c99d720ca.jpeg" class="fk-logo">
+  
+      <div class="fk-search">
+        <input type="text" placeholder="Search products...">
+      </div>
+  
+  
+  </header>
 
 
 <!-- STORE SECTION -->
@@ -177,6 +184,18 @@ document.querySelector(this.getAttribute('href'))
 })
 
 </script>
-
+<script>
+  function searchProducts() {
+    let input = document.querySelector('.fk-search input').value.toLowerCase();
+    let products = document.querySelectorAll('.product');
+  
+    products.forEach(p => {
+      let name = p.innerText.toLowerCase();
+      p.style.display = name.includes(input) ? "block" : "none";
+    });
+  }
+  
+  document.querySelector('.fk-search input').addEventListener("keyup", searchProducts);
+  </script>
 </body>
 </html>
