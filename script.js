@@ -175,7 +175,7 @@ function confirmOrder(){
     
     let receipt=`${date} ${time}  Bill\n\n`
     
-    receipt+=`DHARNA ENTERPRISES(Wholesale)\n\n`
+    receipt+=`Ramadevi Kiranam & General Store(Wholesale)\n\n`
     
     let i=1
     let total=0
@@ -226,7 +226,7 @@ doc.setFontSize(10)
 doc.text(`${date}  ${time}`,10,y)
 
 doc.setFontSize(18)
-doc.text("DHARNA ENTERPRISES(WholeSale)",105,30,{align:"center"})
+doc.text("Ramadevi Kiranam & General Store\nWholeSale",105,30,{align:"center"})
 
 y=50
 
