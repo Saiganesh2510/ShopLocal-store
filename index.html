@@ -24,6 +24,10 @@
       <div class="fk-search">
         <input type="text" placeholder="Search products...">
       </div>
+
+      <button type="button" class="reports-open-btn" onclick="openReportsScreen()" title="Sales reports (PIN)">
+        <i class="fas fa-chart-line" aria-hidden="true"></i><span class="reports-open-label"> Reports</span>
+      </button>
   
   
   </header>
@@ -57,14 +61,95 @@
 
 <h2>Cart</h2>
 
+<div class="bill-fields">
+<label for="customer-name">Customer / shop name</label>
+<input type="text" id="customer-name" name="customer-name" placeholder="Required for bill" autocomplete="organization">
+
+<label for="customer-phone">Customer WhatsApp (optional)</label>
+<input type="tel" id="customer-phone" name="customer-phone" placeholder="10-digit mobile — opens chat to this number" inputmode="numeric">
+
+<p class="bill-hint">Select products, set quantities, then generate a numbered bill. You can print, save PDF, or send on WhatsApp.</p>
+</div>
+
 <div id="cart"></div>
 
 <h2>Total ₹<span id="total">0</span></h2>
 
-<button onclick="confirmOrder()" class="confirm-btn">
-Confirm Order
+<button type="button" onclick="generateBill()" class="confirm-btn">
+Generate bill
+</button>
+<button type="button" class="secondary-cart-btn" onclick="printThermalReceipt()" title="Print without saving invoice">
+Print draft
 </button>
 <button class="close-cart" onclick="toggleCart()">✖</button>
+</div>
+
+<div id="reports-screen" class="reports-screen" aria-hidden="true">
+  <div class="reports-screen-inner">
+    <div id="reports-lock" class="reports-lock">
+      <p class="reports-brand">Dharna Enterprises</p>
+      <h2 class="reports-title">Sales reports</h2>
+      <p class="reports-sub">Enter PIN to view transactions</p>
+      <input type="password" id="reports-pin-input" class="reports-pin-input" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="PIN">
+      <p id="reports-pin-error" class="reports-error" hidden>Incorrect PIN</p>
+      <button type="button" class="reports-primary" onclick="tryUnlockReports()">Unlock</button>
+      <button type="button" class="reports-text-btn" onclick="closeReportsScreen()">Close</button>
+    </div>
+    <div id="reports-dashboard" class="reports-dashboard" hidden>
+      <div class="reports-dash-header">
+        <h2 class="reports-dash-title">Sales &amp; transactions</h2>
+        <div class="reports-dash-actions">
+          <button type="button" class="reports-icon-btn" onclick="lockReportsSession()" title="Lock"><i class="fas fa-lock" aria-hidden="true"></i></button>
+          <button type="button" class="reports-icon-btn" onclick="closeReportsScreen()" title="Close"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="rep-period-tabs" role="tablist">
+        <button type="button" class="rep-tab active" data-period="daily" role="tab">Daily</button>
+        <button type="button" class="rep-tab" data-period="weekly" role="tab">Weekly</button>
+        <button type="button" class="rep-tab" data-period="monthly" role="tab">Monthly</button>
+        <button type="button" class="rep-tab" data-period="yearly" role="tab">Yearly</button>
+      </div>
+      <div id="rep-summary" class="rep-summary"></div>
+      <h3 class="rep-section-title">Transactions</h3>
+      <div class="rep-table-wrap">
+        <table class="rep-trans-table">
+          <thead>
+            <tr><th>Date &amp; time</th><th>Invoice</th><th>Customer</th><th>Total</th></tr>
+          </thead>
+          <tbody id="rep-transactions"></tbody>
+        </table>
+      </div>
+      <h3 class="rep-section-title">Top products</h3>
+      <div id="rep-detail" class="rep-detail"></div>
+      <div class="rep-actions">
+        <button type="button" class="reports-primary rep-print" onclick="printReportsThermal()"><i class="fas fa-print" aria-hidden="true"></i> Print report</button>
+      </div>
+      <details class="rep-change-pin">
+        <summary>Change PIN</summary>
+        <div class="rep-pin-fields">
+          <input type="password" id="pin-old" placeholder="Current PIN" autocomplete="off" maxlength="8">
+          <input type="password" id="pin-new" placeholder="New PIN (4–8 digits)" autocomplete="off" maxlength="8">
+          <button type="button" class="reports-secondary" onclick="changeReportsPin()">Save PIN</button>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<div id="bill-modal" class="bill-modal" role="dialog" aria-modal="true" aria-labelledby="bill-modal-title">
+<div class="bill-modal-backdrop" onclick="closeBillModal()"></div>
+<div class="bill-modal-box">
+<button type="button" class="bill-close" onclick="closeBillModal()" aria-label="Close">×</button>
+<h2 id="bill-modal-title" class="sr-only">Bill preview</h2>
+<div id="bill-preview" class="bill-preview"></div>
+<div class="bill-actions">
+<button type="button" class="bill-act bill-print" onclick="printBillFromModal()"><i class="fas fa-print" aria-hidden="true"></i> Print</button>
+<button type="button" class="bill-act bill-pdf" onclick="downloadBillPDF()"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</button>
+<button type="button" class="bill-act bill-wa" onclick="sendBillWhatsApp()"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</button>
+<button type="button" class="bill-act bill-copy" onclick="copyBillText()"><i class="fas fa-copy" aria-hidden="true"></i> Copy</button>
+<button type="button" class="bill-act bill-done" onclick="closeBillModal()">Done</button>
+</div>
+</div>
 </div>
 
 
