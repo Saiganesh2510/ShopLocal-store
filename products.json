@@ -947,3 +947,69 @@
     "mrp": 30
   }
 ]
+[
+  {
+    "id": 1775662376153.8633,
+    "name": "Kurkure MM 10/-",
+    "price": 105,
+    "stock": 50,
+    "image": "https://www.bbassets.com/media/uploads/p/l/294305_15-kurkure-namkeen-masala-munch.jpg",
+    "mrp": 120
+  },
+  {
+    "id": 1775662679502.704,
+    "name": "Kurkure 5/-(12pcs)",
+    "price": 60,
+    "stock": 50,
+    "image": "https://m.media-amazon.com/images/I/71sOPzrW0mL._AC_UF894,1000_QL80_.jpg",
+    "mrp": 53
+  },
+  {
+    "id": 1775662761587.7534,
+    "name": "Kurkure NT5/-",
+    "price": 53,
+    "stock": 60,
+    "image": "https://m.media-amazon.com/images/I/819KW69gDSL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzBGMTExMSIgZm9udD0iQW1hem9uRW1iZXIgNjYiPjQuNDwvc3Bhbj4=,60,875,420,420,0,0_PIRIOFOURANDHALF-medium-V2,TopLeft,190,885_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNjYiPigyNCk8L3NwYW4+,650,875,420,420,0,0_QL100_.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1775662931322.3516,
+    "name": "Lays ASCO",
+    "price": 53,
+    "stock": 60,
+    "image": "https://www.bbassets.com/media/uploads/p/l/40127986_3-lays-chips-american-style-cream-onion.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1775662994795.7024,
+    "name": "Lays CS",
+    "price": 53,
+    "stock": 60,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnb8mfj7kQ-0z8UI5AqUPR7CLbW1qmyUMBYw&s",
+    "mrp": 60
+  },
+  {
+    "id": 1775664158660.7437,
+    "name": "lays STT",
+    "price": 53,
+    "stock": 69,
+    "image": "https://image.cdn.shpy.in/319551/lays-stt-55gm-1694866761118_SKU-0945_0.png?format=webp",
+    "mrp": 60
+  },
+  {
+    "id": 1775664253105.065,
+    "name": "Lays CL",
+    "price": 105,
+    "stock": 60,
+    "image": "https://www.bbassets.com/media/uploads/p/xl/294278_23-lays-potato-chips-hot-sweet-chilli-flavour-best-quality.jpg",
+    "mrp": 120
+  },
+  {
+    "id": 1775664375959.8855,
+    "name": "Lays Hnds",
+    "price": 53,
+    "stock": 60,
+    "image": "https://image.cdn.shpy.in/319551/1701020988419_1.jpeg?width=600&format=webp",
+    "mrp": 60
+  }
+]
