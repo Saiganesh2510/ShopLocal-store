@@ -510,52 +510,133 @@ function printThermalReceipt() {
   openThermalPrintWindow("Draft receipt", body)
 }
 
+function getCartItem(id) {
+  return cart.find((c) => c.id === id)
+}
+
+function getProduct(id) {
+  return products.find((p) => p.id === id)
+}
+
+function clamp(n, min, max) {
+  return Math.max(min, Math.min(max, n))
+}
+
 function displayProducts() {
   const container = document.getElementById("products")
-  container.innerHTML = ""
+  if (!container) return
 
-  products.forEach((p) => {
-    const cartItem = cart.find((c) => c.id === p.id)
-    const qty = cartItem ? cartItem.qty : 0
+  container.innerHTML = products
+    .map((p) => {
+      const cartItem = getCartItem(p.id)
+      const qty = cartItem ? cartItem.qty : 0
 
-    let discount = 0
-    if (p.mrp) {
-      discount = Math.round(((p.mrp - p.price) / p.mrp) * 100)
-    }
+      const discount = p.mrp
+        ? Math.round(((p.mrp - p.price) / p.mrp) * 100)
+        : 0
 
-    container.innerHTML += `
+      return `
+        <div class="product" id="product-${p.id}">
+          ${p.mrp ? `<div class="discount-badge">${discount}% off</div>` : ""}
+          <img src="${p.image}" alt="${escapeHtml(p.name)}">
+          <h3>${escapeHtml(p.name)}</h3>
 
-<div class="product">
+          <p class="price">
+            <span class="our-price">₹${p.price}</span>
+            ${p.mrp ? `<span class="mrp">₹${p.mrp}</span>` : ""}
+          </p>
 
-${p.mrp ? `<div class="discount-badge">${discount}% off</div>` : ``}
+          <p class="stock-line">Stock: <span id="stock-${p.id}">${p.stock}</span></p>
 
-<img src="${p.image}">
+          <button id="add-btn-${p.id}" onclick="addToCart(${p.id})">Add to Cart</button>
 
-<h3>${p.name}</h3>
+          <div class="qty-controls">
+            <button onclick="changeQty(${p.id}, -1)">-</button>
+            <input
+              id="qty-${p.id}"
+              type="number"
+              min="0"
+              value="${qty}"
+              class="qty-input"
+              oninput="manualQty(${p.id}, this.value)"
+            >
+            <button onclick="changeQty(${p.id}, 1)">+</button>
+          </div>
+        </div>
+      `
+    })
+    .join("")
 
-<p class="price">
-<span class="our-price">₹${p.price}</span>
-${p.mrp ? `<span class="mrp">₹${p.mrp}</span>` : ``}
-</p>
+  updateAllProductCards()
+}
 
-<p>Stock: ${p.stock}</p>
+function updateProductCard(id) {
+  const product = getProduct(id)
+  const item = getCartItem(id)
+  if (!product) return
 
-<button onclick="addToCart(${p.id})">Add to Cart</button>
+  const qty = item ? item.qty : 0
 
-<div class="qty-controls">
-<button onclick="changeQty(${p.id},1)">+</button>
-<span>${qty}</span>
-<button onclick="changeQty(${p.id},-1)">-</button>
-</div>
+  const qtyInput = document.getElementById(`qty-${id}`)
+  const stockSpan = document.getElementById(`stock-${id}`)
+  const addBtn = document.getElementById(`add-btn-${id}`)
 
-</div>
-`
-  })
+  if (qtyInput) qtyInput.value = qty
+  if (stockSpan) stockSpan.textContent = product.stock
+
+  if (addBtn) {
+    addBtn.disabled = product.stock <= 0
+    addBtn.textContent = product.stock <= 0 ? "Out of Stock" : "Add to Cart"
+  }
+}
+
+function updateAllProductCards() {
+  products.forEach((p) => updateProductCard(p.id))
+}
+
+function manualQty(id, value) {
+  const product = getProduct(id)
+  if (!product) return
+
+  const currentItem = getCartItem(id)
+  const currentQty = currentItem ? currentItem.qty : 0
+  const totalAvailable = currentQty + product.stock
+
+  let newQty = parseInt(value, 10)
+  if (!Number.isFinite(newQty) || newQty < 0) newQty = 0
+  newQty = clamp(newQty, 0, totalAvailable)
+
+  const delta = newQty - currentQty
+
+  if (delta === 0) {
+    updateProductCard(id)
+    displayCart()
+    return
+  }
+
+  product.stock -= delta
+
+  if (newQty <= 0) {
+    cart = cart.filter((c) => c.id !== id)
+  } else if (currentItem) {
+    currentItem.qty = newQty
+    currentItem.price = product.price
+    currentItem.name = product.name
+    currentItem.image = product.image
+  } else {
+    cart.push({ ...product, qty: newQty })
+  }
+
+  updateProductCard(id)
+  displayCart()
 }
 
 function changeQty(id, change) {
-  const product = products.find((p) => p.id === id)
-  const item = cart.find((c) => c.id === id)
+  const product = getProduct(id)
+  if (!product) return
+
+  const item = getCartItem(id)
+  const currentQty = item ? item.qty : 0
 
   if (change > 0) {
     if (product.stock <= 0) {
@@ -563,93 +644,71 @@ function changeQty(id, change) {
       return
     }
 
-    product.stock--
+    product.stock -= 1
 
     if (item) {
-      item.qty++
+      item.qty += 1
     } else {
       cart.push({ ...product, qty: 1 })
     }
-  }
+  } else if (change < 0) {
+    if (!item) return
 
-  if (change < 0 && item) {
-    item.qty--
-    product.stock++
+    item.qty -= 1
+    product.stock += 1
 
     if (item.qty <= 0) {
       cart = cart.filter((c) => c.id !== id)
     }
   }
 
-  displayProducts()
+  updateProductCard(id)
   displayCart()
 }
 
 function addToCart(id) {
-  const product = products.find((p) => p.id === id)
-  const item = cart.find((c) => c.id === id)
-
-  if (product.stock <= 0) {
-    alert("Out of stock")
-    return
-  }
-
-  product.stock--
-
-  if (item) {
-    item.qty++
-  } else {
-    cart.push({ ...product, qty: 1 })
-  }
-
-  displayProducts()
-  displayCart()
+  changeQty(id, 1)
 }
 
 function displayCart() {
   const div = document.getElementById("cart")
-  div.innerHTML = ""
+  if (!div) return
 
   let total = 0
 
-  cart.forEach((item) => {
-    const price = item.qty * item.price
-    total += price
+  div.innerHTML = cart
+    .map((item) => {
+      const price = item.qty * item.price
+      total += price
 
-    div.innerHTML += `
+      return `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${escapeHtml(item.name)}">
+          <span class="cart-name">${escapeHtml(item.name)}</span>
 
-<div class="cart-item">
+          <div class="qty">
+            <button onclick="changeQty(${item.id}, -1)">-</button>
+            <span>${item.qty}</span>
+            <button onclick="changeQty(${item.id}, 1)">+</button>
+          </div>
 
-<img src="${item.image}">
+          <span>₹${price}</span>
+        </div>
+      `
+    })
+    .join("")
 
-${item.name}
+  const totalEl = document.getElementById("total")
+  if (totalEl) totalEl.innerText = total
 
-<div class="qty">
-<button onclick="changeQty(${item.id},-1)">-</button>
-${item.qty}
-<button onclick="changeQty(${item.id},1)">+</button>
-</div>
-
-₹${price}
-
-</div>
-`
-  })
-
-  document.getElementById("total").innerText = total
   updateCartCount()
 }
 
 function updateCartCount() {
-  let count = 0
-
-  cart.forEach((item) => {
-    count += item.qty
-  })
-
-  document.getElementById("cart-count").innerText = count
+  const count = cart.reduce((sum, item) => sum + item.qty, 0)
+  const countEl = document.getElementById("cart-count")
+  if (countEl) countEl.innerText = count
 }
-
 function toggleCart() {
   document.getElementById("cart-panel").classList.toggle("open")
 }
