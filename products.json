@@ -98,7 +98,7 @@
   {
     "id": 1772803503520.1252,
     "name": "IMLI SPOON JAR (150pcs)",
-    "price": 110,
+    "price": 100,
     "mrp": 150,
     "image": "https://cdn.quicksell.co/-Mj5BUyTtyTgI5aqzZnV/products_400/-OhP8mmuauFpOxrbpz07.jpg",
     "stock": 20
@@ -130,7 +130,7 @@
   {
     "id": 1772803503520.1174,
     "name": "SUN BALLOON â‚¹1(100pcs)",
-    "price": 70,
+    "price": 60,
     "mrp": 100,
     "image": "https://cdn.quicksell.co/-Mj5BUyTtyTgI5aqzZnV/products_400/-OLsd5xU6JLR8msr_hKx.jpg",
     "stock": 50
@@ -157,7 +157,7 @@
     "price": 50,
     "mrp": 60,
     "image": "https://dukaan.b-cdn.net/700x700/webp/112370/fee126be-9252-432d-ae53-90fdd110541c.png",
-    "stock": 10
+    "stock": 0
   },
   {
     "id": 1773053482533,
@@ -165,7 +165,7 @@
     "price": 55,
     "mrp": 60,
     "image": "https://hbkirana.in/wp-content/uploads/2025/03/image_19_z4kx-rb_1920x.jpg",
-    "stock": 24
+    "stock": 0
   },
   {
     "id": 1773053796383,
@@ -181,7 +181,7 @@
     "price": 55,
     "mrp": 60,
     "image": "https://www.bbassets.com/media/uploads/p/l/40001672_14-britannia-marie-gold-biscuits-light-crisp-tea-time-snack-no-trans-fat.jpg",
-    "stock": 24
+    "stock": 0
   },
   {
     "id": 1773044031535,
@@ -456,14 +456,6 @@
     "mrp": 10
   },
   {
-    "id": 1775417169388.9497,
-    "name": "Maya agarabathi(12pcs 1pack)",
-    "price": 108,
-    "stock": 100,
-    "image": "data:image/jpeg;base64,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",
-    "mrp": 120
-  },
-  {
     "id": 1775580940392.3613,
     "name": "Xtra surf 500gms(BUY2GET1)",
     "price": 40,
@@ -500,7 +492,7 @@
     "name": "Kings",
     "price": 218,
     "stock": 20,
-    "image": "https://tpackss.globaltobaccocontrol.org/sites/default/files/styles/500x500/public/pack_images/IND_MUM_H1_010_1.JPG?itok=lfctJKOO",
+    "image": "https://storage.googleapis.com/shy-pub/18129/1686368960429_SKU-0562_0.webp",
     "mrp": 240
   },
   {
@@ -508,7 +500,7 @@
     "name": "small goldflake",
     "price": 108,
     "stock": 50,
-    "image": "https://tpackss.globaltobaccocontrol.org/sites/default/files/styles/500x500/public/pack_images/IND_MUM_H1_010_1.JPG?itok=lfctJKOO",
+    "image": "https://storage.googleapis.com/shy-pub/18129/1686368960429_SKU-0562_0.webp",
     "mrp": 120
   },
   {
@@ -609,7 +601,7 @@
   },
   {
     "id": 1775635416644.9563,
-    "name": "Wisper 37MRP",
+    "name": "Whisper 37MRP",
     "price": 32,
     "stock": 40,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEyxusVotE_KbZ2LsPg4n91HDOBLMBVZoEQ&s",
@@ -617,7 +609,7 @@
   },
   {
     "id": 1775635416644.201,
-    "name": "Wisper XL 45MRP",
+    "name": "Whisper XL 45MRP",
     "price": 39,
     "stock": 40,
     "image": "https://www.bbassets.com/media/uploads/p/s/40073393_19-whisper-choice-sanitary-napkins-xl-ultra-with-wings.jpg",
@@ -625,10 +617,11 @@
   },
   {
     "id": 1775635416644.663,
-    "name": "Wisper 50MRP",
-    "price": 0,
-    "stock": 0,
+    "name": "Whisper 50MRP",
+    "price": 42,
+    "stock": 50,
     "image": "https://www.bbassets.com/media/uploads/p/l/1200003544_4-whisper-choice-ultra-sanitary-pads-xl.jpg"
+    "mrp": 50
   },
   {
     "id": 1775635416644.971,
@@ -641,9 +634,10 @@
   {
     "id": 1775635416644.3218,
     "name": "Stayfree 45MRP",
-    "price": 0,
-    "stock": 0,
+    "price": 39,
+    "stock": 50,
     "image": "https://image.cdn.shpy.in/487202/SKU-0384_0-1775063234885.jpg?format=webp"
+    "mrp": 45
   },
   {
     "id": 1775635416644.3416,
@@ -696,9 +690,10 @@
   {
     "id": 1775635416644.6633,
     "name": "chik 1/-",
-    "price": 0,
+    "price": 13,
     "stock": 40,
     "image": "https://www.bbassets.com/media/uploads/p/l/414766_1-chik-thick-glossy-black-shampoo.jpg"
+    "mrp": 16
   },
   {
     "id": 1775635416644.3262,
@@ -719,7 +714,7 @@
   {
     "id": 1775635416644.9385,
     "name": "Santhoor25/-(4pcs)",
-    "price": 90,
+    "price": 85,
     "stock": 40,
     "image": "https://m.media-amazon.com/images/I/714IZC2WA4L._AC_UF350,350_QL80_.jpg",
     "mrp": 100
@@ -727,9 +722,10 @@
   {
     "id": 1775635416644.0022,
     "name": "Mysore sandel",
-    "price": 0,
+    "price": 36,
     "stock": 40,
     "image": "https://www.bbassets.com/media/uploads/p/xl/100003862_1-mysore-sandal-bathing-soap.jpg"
+    "mrp": 38
   },
   {
     "id": 1775635416644.833,
@@ -758,9 +754,10 @@
   {
     "id": 1775635416644.995,
     "name": "Indica easy hair color 30/-",
-    "price": 0,
+    "price": 25,
     "stock": 40,
     "image": "https://www.bbassets.com/media/uploads/p/l/40111097-2_4-indica-easy-hair-colour-natural-black.jpg"
+    "mrp": 30
   },
   {
     "id": 1775635416644.5857,
@@ -1008,6 +1005,150 @@
     "price": 53,
     "stock": 60,
     "image": "https://image.cdn.shpy.in/319551/1701020988419_1.jpeg?width=600&format=webp",
+    "mrp": 60
+  },
+  {
+    "id": 1775723147296.7192,
+    "name": "lakasman rekhaa comndo18/-(12pcs)",
+    "price": 110,
+    "stock": 100,
+    "image": "https://warangalmarket.com/wp-content/uploads/2025/07/high-power-cockroach-430x430.jpg",
+    "mrp": 180
+  },
+  {
+    "id": 1775723999152.0813,
+    "name": "Favikwik 5/-(28pcs)",
+    "price": 125,
+    "stock": 60,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/ZC/VC/PZ/59679353/led-light-bulb.jpeg",
+    "mrp": 140
+  },
+  {
+    "id": 1775724079335.3218,
+    "name": "Ajay Complate 18/-(10+2free)",
+    "price": 140,
+    "stock": 100,
+    "image": "https://pushanta.com/public/uploads/product_11662021097.jpg",
+    "mrp": 216
+  },
+  {
+    "id": 1775724124303.347,
+    "name": "Ajay hard 22/-",
+    "price": 18,
+    "stock": 150,
+    "image": "https://5.imimg.com/data5/IOS/Default/2026/1/573810527/XB/HK/QO/47976024/product-jpeg.jpeg",
+    "mrp": 22
+  },
+  {
+    "id": 1775724205411.1936,
+    "name": "Denver Deo 80/-",
+    "price": 55,
+    "stock": 50,
+    "image": "https://5.imimg.com/data5/ANDROID/Default/2024/10/457228793/PH/ZW/FK/189488679/product-jpeg-500x500.jpg",
+    "mrp": 80
+  },
+  {
+    "id": 1775724286144.4675,
+    "name": "E 1015 AA 20/-",
+    "price": 130,
+    "stock": 50,
+    "image": "https://www.jiomart.com/images/product/original/490004996/eveready-red-1015-aa-carbon-zinc-batteries-pack-of-10-product-images-o490004996-p490004996-0-202207131317.jpg",
+    "mrp": 200
+  },
+  {
+    "id": 1775724328827.6797,
+    "name": "E 1012 AAA",
+    "price": 130,
+    "stock": 50,
+    "image": "https://www.jiomart.com/images/product/original/490809579/eveready-red-1012-aaa-carbon-zinc-batteries-pack-of-10-product-images-o490809579-p490809579-0-202207131317.jpg",
+    "mrp": 200
+  },
+  {
+    "id": 1775724502458.3074,
+    "name": "Laser (R) 10/-(12pcs)",
+    "price": 100,
+    "stock": 50,
+    "image": "https://5.imimg.com/data5/ANDROID/Default/2023/10/349099682/TT/MF/SF/49926275/product-jpeg-500x500.jpg",
+    "mrp": 120
+  },
+  {
+    "id": 1775724556043.291,
+    "name": "Lasser Blade 2/-(10packs)",
+    "price": 80,
+    "stock": 50,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQlshJ1yE3NcqFp2T2ewerJ_8SSYVBjBvqFg&s",
+    "mrp": 120
+  },
+  {
+    "id": 1775724637212.9014,
+    "name": "Gillette Guard Razor28/-(10pcs)",
+    "price": 230,
+    "stock": 100,
+    "image": "https://m.media-amazon.com/images/I/716CQJeMFdL._AC_UF350,350_QL80_.jpg",
+    "mrp": 280
+  },
+  {
+    "id": 1775724685841.242,
+    "name": "Chinthol 10/-(12pcs)",
+    "price": 108,
+    "stock": 100,
+    "image": "https://image.cdn.shpy.in/285171/1685155712394_SKU-0201_1.png?width=600&format=webp",
+    "mrp": 120
+  },
+  {
+    "id": 1775724721141.0122,
+    "name": "Mumy Poko 10/-(8pcs)",
+    "price": 68,
+    "stock": 50,
+    "image": "https://image.cdn.shpy.in/285171/1685815544536_SKU-0362_0.png?width=600&format=webp",
+    "mrp": 80
+  },
+  {
+    "id": 1775724755624.0864,
+    "name": "Mumy Poko (M) 12/-",
+    "price": 80,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/10/354479927/IN/IS/PI/139854906/mamy-poko-pants-diaper-500x500.jpeg",
+    "mrp": 96
+  },
+  {
+    "id": 1775724797756.4714,
+    "name": "Pampers XL 38/-(8pcs)",
+    "price": 248,
+    "stock": 50,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTe8Obr45NgVl_5PJP6HIMmHVCva8KDb2poA&s",
+    "mrp": 304
+  },
+  {
+    "id": 1775724966039.308,
+    "name": "Chatpatte",
+    "price": 50,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/BN/OW/VN/SELLER-77460638/stick-papad.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1775725030571.385,
+    "name": "JUMBO JUNGLE CP",
+    "price": 50,
+    "stock": 100,
+    "image": "https://i.ytimg.com/vi/FGYPlKKTqMA/hqdefault.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1775725103621.8208,
+    "name": "wheels",
+    "price": 50,
+    "stock": 200,
+    "image": "https://5.imimg.com/data5/MP/UB/HH/NSDMERP-4142104/4142104-product-1556959168692-250x250.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1775725221346.075,
+    "name": "Tomato CP",
+    "price": 50,
+    "stock": 200,
+    "image": "https://dukaan.b-cdn.net/1000x1000/webp/3420902/60596967-b259-439b-a4e9-b8e6d5ce8e2d/1620813205579-69192c92-3cfa-4171-85af-76efe641365a.jpeg",
     "mrp": 60
   }
 ]
