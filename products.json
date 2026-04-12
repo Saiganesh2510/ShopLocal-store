@@ -514,7 +514,7 @@
     {
       "id": 1775611746942.5051,
       "name": "Advance(sm)",
-      "price": 108,
+      "price": 105,
       "stock": 20,
       "image": "https://cdn.dotpe.in/longtail/item_thumbnails/8498388/FWmGt3fT-800-800.webp",
       "mrp": 120
@@ -1150,5 +1150,53 @@
       "stock": 200,
       "image": "https://dukaan.b-cdn.net/1000x1000/webp/3420902/60596967-b259-439b-a4e9-b8e6d5ce8e2d/1620813205579-69192c92-3cfa-4171-85af-76efe641365a.jpeg",
       "mrp": 60
-    }
+    },
+    {
+    "id": 1775964419083.736,
+    "name": "Everest Chicken Masala - 5/- (Pack Of 20 )",
+    "price": 85,
+    "stock": 100,
+    "image": "https://image.cdn.shpy.in/285171/1685737715423_SKU-0316_1.png?width=600&format=webp",
+    "mrp": 100
+  },
+  {
+    "id": 1775964543198.185,
+    "name": "Everest Garam Masala-5/-(pack of 20)",
+    "price": 85,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440416533/VP/PX/UF/60311052/everest-garam-masala.jpeg",
+    "mrp": 100
+  },
+  {
+    "id": 1775964606215.757,
+    "name": "Everest Egg Curry Masala-5/-(pack of 20)",
+    "price": 85,
+    "stock": 100,
+    "image": "https://www.bbassets.com/media/uploads/p/l/40290704_1-everest-everest-egg-curry-masala-m.jpg",
+    "mrp": 100
+  },
+  {
+    "id": 1775964661497.0513,
+    "name": "Everest Fish Curry Masala-5/-(pack of 20)",
+    "price": 85,
+    "stock": 100,
+    "image": "https://www.bbassets.com/media/uploads/p/l/40290710_1-everest-everest-fish-curry-masala.jpg",
+    "mrp": 100
+  },
+  {
+    "id": 1775964706730.708,
+    "name": "Everest Sambar Masala-5/-(pack of 20)",
+    "price": 85,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440417756/ZS/TG/BW/60311052/everest-sambar-masala.jpeg",
+    "mrp": 100
+  },
+  {
+    "id": 1775964787847.2876,
+    "name": "Everest Meat Masala - 5/- (Pack Of 20 )",
+    "price": 85,
+    "stock": 100,
+    "image": "https://image.cdn.shpy.in/285171/1685737784666_SKU-0317_1.png?width=600&format=webp",
+    "mrp": 100
+  }
   ]
