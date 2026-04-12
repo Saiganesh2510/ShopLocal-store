@@ -13,7 +13,23 @@
 </head>
 
 <body>
-
+<div style="background:#232b34; color:white; padding:15px; text-align:center;">
+    <h2 style="margin:5px; color:white; font-size:26px;">DHARNA ENTERPRISE</h2>
+    <div style="font-size:14px;">
+        ✔ Wholesale Prices | ✔ Trusted by Local Shops |✔ Visit Us: NewShayampet, Hanamkonda
+    </div>
+  </div>
+  
+  <div style="text-align:center; margin:10px;">
+      <button onclick="callNow()" style="padding:12px 20px; margin:5px; border:none; border-radius:8px; background:#28a745; color:white; font-size:16px;">
+          📞 Call Now
+      </button>
+  
+      <button onclick="sendWhatsApp()" style="padding:12px 20px; margin:5px; border:none; border-radius:8px; background:#25d366; color:white; font-size:16px;">
+          💬 WhatsApp
+      </button>
+  </div>
+  </div>
   <header class="fk-header">
 
     <!-- TOP BAR -->
@@ -59,7 +75,18 @@
 
 <div class="cart-panel" id="cart-panel">
 
-<h2>Cart</h2>
+<div style="display:flex; align-items:center; justify-content:space-between;">
+
+  <h2 style="margin:0;">Cart</h2>
+
+  <button 
+    class="close-cart" 
+    onclick="toggleCart()" 
+    style="background:#e53935; color:white; border:none; padding:8px 12px; border-radius:6px; font-size:16px; cursor:pointer;">
+    ✖
+  </button>
+
+</div>
 
 <div class="bill-fields">
 <label for="customer-name">Customer / shop name</label>
