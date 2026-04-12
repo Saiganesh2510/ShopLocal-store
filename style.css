@@ -163,26 +163,26 @@ body{
     }
     
     /* CART PANEL */
-    
-    .cart-panel{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:320px;
-        max-width:90%;
-        height:100%;
-        background:white;
-        box-shadow:-3px 0 10px rgba(0,0,0,0.2);
-        padding:20px;
-        overflow-y:auto;
-        transition:0.3s;
-        z-index:999;
-        }
-        
-        .cart-panel.open{
-        right:0;
-        }
-    
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;   /* hidden initially */
+  width: 350px;
+  height: 100%;
+  background: white;
+  z-index: 2000;
+
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* SHOW CART */
+.cart-panel.active {
+  right: 0;
+}    
+
     .cart-item{
     display:flex;
     align-items:center;
