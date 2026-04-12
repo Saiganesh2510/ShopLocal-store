@@ -1,6 +1,16 @@
 let products = []
 let cart = []
 
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function loadCart() {
+  let savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
+}
 const INVOICES_KEY = "dharna_invoices_v1"
 const INVOICE_NO_KEY = "dharna_invoice_no_v1"
 const REPORTS_PIN_KEY = "dharna_reports_pin_v1"
@@ -18,7 +28,10 @@ fetch("products.json")
   .then((res) => res.json())
   .then((data) => {
     products = data
+    loadCart();
     displayProducts()
+    displayCart()
+    updateCartCount()
   })
 
 function getInvoices() {
@@ -380,6 +393,7 @@ function generateBill() {
   if (modal) modal.classList.add("open")
 
   cart = []
+  localStorage.removeItem("cart")
   displayProducts()
   displayCart()
 }
@@ -629,6 +643,7 @@ function manualQty(id, value) {
 
   updateProductCard(id)
   displayCart()
+  saveCart();   // 🔥 ADD THIS
 }
 
 function changeQty(id, change) {
@@ -643,7 +658,7 @@ function changeQty(id, change) {
       alert("Out of stock")
       return
     }
-
+    
     product.stock -= 1
 
     if (item) {
@@ -664,6 +679,7 @@ function changeQty(id, change) {
 
   updateProductCard(id)
   displayCart()
+  saveCart();   // 🔥 ADD THIS
 }
 
 function addToCart(id) {
@@ -714,6 +730,9 @@ function toggleCart() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  loadCart();           // 🔥 ADD THIS
+  displayCart();        // 🔥 ADD THIS
+  updateCartCount();    // 🔥 ADD THIS
   initReportsTabs()
   const pin = document.getElementById("reports-pin-input")
   if (pin) {
@@ -729,3 +748,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 })
+function sendWhatsApp() {
+  let message = "Hi, please send your location. I want to visit your shop directly.";
+  window.open("https://wa.me/918520896231?text=" + encodeURIComponent(message));
+}
+
+// CALL FUNCTION
+function callNow() {
+window.location.href = "tel:8520896231";
+}
