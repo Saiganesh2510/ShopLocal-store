@@ -506,7 +506,7 @@
     {
       "id": 1775611697092.8982,
       "name": "small american club",
-      "price": 108,
+      "price": 105,
       "stock": 20,
       "image": "https://dukaan.b-cdn.net/700x700/webp/199635/9319472b-6435-463b-8545-1f1a98bbe27b.png",
       "mrp": 120
@@ -577,20 +577,36 @@
     },
     {
       "id": 1775635416644.0117,
-      "name": "Parasute (24pcs)10MRP",
+      "name": "Parasute 10MRP",
       "price": 9,
-      "stock": 40,
+      "stock": 400,
       "image": "https://5.imimg.com/data5/SELLER/Default/2025/7/526060139/BB/LQ/ZT/243695023/parachute-coconut-hair-oil.png",
       "mrp": 10
     },
     {
       "id": 1775635416644.902,
-      "name": "Parasute (24pcs)20MRP",
+      "name": "Parasute 20MRP",
       "price": 18,
-      "stock": 40,
+      "stock": 400,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdwd6zFna8qBELcW4DQax1vXewwK1Nf9CPjg&s",
       "mrp": 20
     },
+    {
+    "id": 1776071140955.4038,
+    "name": "Parasute (24pcs)10MRP",
+    "price": 430,
+    "stock": 100,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdwd6zFna8qBELcW4DQax1vXewwK1Nf9CPjg&s",
+    "mrp": 480
+  },
+  {
+    "id": 1776071662264.8293,
+    "name": "Parasute (24pcs)10MRP",
+    "price": 215,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2025/7/526060139/BB/LQ/ZT/243695023/parachute-coconut-hair-oil.png",
+    "mrp": 240
+  },
     {
       "id": 1775635416644.9563,
       "name": "Whisper 37MRP",
@@ -602,7 +618,7 @@
     {
       "id": 1775635416644.201,
       "name": "Whisper XL 45MRP",
-      "price": 39,
+      "price": 38,
       "stock": 40,
       "image": "https://www.bbassets.com/media/uploads/p/s/40073393_19-whisper-choice-sanitary-napkins-xl-ultra-with-wings.jpg",
       "mrp": 45
@@ -626,7 +642,7 @@
     {
       "id": 1775635416644.3218,
       "name": "Stayfree 45MRP",
-      "price": 39,
+      "price": 38,
       "stock": 50,
       "image": "https://image.cdn.shpy.in/487202/SKU-0384_0-1775063234885.jpg?format=webp",
       "mrp": 45
@@ -935,14 +951,6 @@
       "image": "https://www.bbassets.com/media/uploads/p/l/241600_9-tata-salt-iodized.jpg",
       "mrp": 30
     },
-    {
-    "id": 1775885863878.323,
-    "name": "Golddrop oil",
-    "price": 180,
-    "stock": 20,
-    "image": "https://www.bbassets.com/media/uploads/p/l/279280_2-gold-drop-refined-oil-sunflower.jpg",
-    "mrp": 230
-  },
     {
       "id": 1775662376153.8633,
       "name": "Kurkure MM 10/-",
