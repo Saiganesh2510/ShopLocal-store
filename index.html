@@ -105,9 +105,9 @@
 <button type="button" onclick="generateBill()" class="confirm-btn">
 Generate bill
 </button>
-<button type="button" class="secondary-cart-btn" onclick="printThermalReceipt()" title="Print without saving invoice">
-Print draft
-</button>
+<button type="button" class="secondary-cart-btn" onclick="directPrintThermal()">
+  🖨️ Direct Print
+  </button>
 <button class="close-cart" onclick="toggleCart()">✖</button>
 </div>
 
@@ -309,5 +309,6 @@ document.querySelector(this.getAttribute('href'))
   
   document.querySelector('.fk-search input').addEventListener("keyup", searchProducts);
   </script>
+  <script src="https://unpkg.com/@point-of-sale/webbluetooth-receipt-printer/dist/webbluetooth-receipt-printer.umd.js"></script>
 </body>
 </html>
