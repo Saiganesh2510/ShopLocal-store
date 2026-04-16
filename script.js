@@ -559,26 +559,125 @@ function downloadBillPDF() {
 }
 
 function sendBillWhatsApp() {
-  if (!window._lastBill) return
-  const b = window._lastBill
-  const num = b.phone || STORE_PHONE
-  const url = `https://wa.me/${num}?text=${encodeURIComponent(b.plainText)}`
-  window.open(url, "_blank")
+  if (!window._lastBill) return;
+
+  let b = window._lastBill;
+
+  function cleanText(text) {
+    return String(text || "").replace(/[^\x00-\x7F]/g, "");
+  }
+
+  let text = "";
+
+  // HEADER
+  text += "DHARNA ENTERPRISE\n";
+  text += "NewShayampet Hanamkonda\n";
+  text += "Tel: 918520896231\n";
+  text += "----------------------\n";
+
+  // BILL INFO
+  text += "Bill No: " + b.invoiceNo + "\n";
+  text += b.dateStr + "\n";
+
+  // CUSTOMER
+  if (b.customer) text += "Name: " + b.customer + "\n";
+  if (b.phone) text += "Phone: " + b.phone + "\n";
+
+  text += "----------------------\n";
+
+  // ITEMS
+  let totalItems = 0;
+
+  b.items.forEach((item) => {
+    totalItems += item.qty;
+
+    text += cleanText(item.name) + "\n";
+    text += item.qty + " x " + item.price + " = " + item.lineTotal + "\n";
+  });
+
+  // TOTAL
+  text += "----------------------\n";
+  text += "Items: " + totalItems + "\n";
+  text += "TOTAL: Rs " + b.total + "\n";
+
+  // FOOTER
+  text += "Thank You! Visit Again!";
+
+  // FORMAT FOR WHATSAPP
+  let formatted = "```" + text + "```";
+
+  // NUMBER
+  let number = b.phone ? "91" + b.phone : "918520896231";
+
+  let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(formatted);
+
+  window.open(url, "_blank");
 }
 
 function copyBillText() {
-  if (!window._lastBill) return
-  const t = window._lastBill.plainText
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(t).then(
-      () => alert("Copied to clipboard."),
-      () => prompt("Copy:", t)
-    )
+  if (!window._lastBill) return;
+
+  let b = window._lastBill;
+
+  function cleanText(text) {
+    return String(text || "").replace(/[^\x00-\x7F]/g, "");
+  }
+
+  let text = "";
+
+  // HEADER
+  text += "DHARNA ENTERPRISE\n";
+  text += "NewShayampet Hanamkonda\n";
+  text += "Tel: 918520896231\n";
+  text += "----------------------\n";
+
+  // BILL INFO
+  text += "Bill No: " + b.invoiceNo + "\n";
+  text += b.dateStr + "\n";
+
+  // CUSTOMER
+  if (b.customer) text += "Name: " + b.customer + "\n";
+  if (b.phone) text += "Phone: " + b.phone + "\n";
+
+  text += "----------------------\n";
+
+  // ITEMS
+  let totalItems = 0;
+
+  b.items.forEach((item) => {
+    totalItems += item.qty;
+
+    text += cleanText(item.name) + "\n";
+    text += item.qty + " x " + item.price + " = " + item.lineTotal + "\n";
+  });
+
+  // TOTAL
+  text += "----------------------\n";
+  text += "Items: " + totalItems + "\n";
+  text += "TOTAL: Rs " + b.total + "\n";
+
+  // FOOTER
+  text += "Thank You! Visit Again!\n";
+
+  // COPY FIX
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Copied ✅"))
+      .catch(() => fallbackCopy(text));
   } else {
-    prompt("Copy:", t)
+    fallbackCopy(text);
+  }
+
+  function fallbackCopy(txt) {
+    const textarea = document.createElement("textarea");
+    textarea.value = txt;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Copied ✅");
   }
 }
-
 function printThermalReceipt() {
   if (cart.length === 0) {
     alert("Cart is empty.")
