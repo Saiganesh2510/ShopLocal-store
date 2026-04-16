@@ -343,38 +343,45 @@ function buildBillHtml(data) {
 
 function generateBill() {
   if (cart.length === 0) {
-    alert("Cart is empty.")
-    return
+    alert("Cart is empty.");
+    return;
   }
-  const nameEl = document.getElementById("customer-name")
-  const phoneEl = document.getElementById("customer-phone")
-  const customer = (nameEl && nameEl.value.trim()) || ""
-  if (!customer) {
-    alert("Please enter customer / shop name for the bill.")
-    if (nameEl) nameEl.focus()
-    return
-  }
-  const phoneRaw = (phoneEl && phoneEl.value.replace(/\D/g, "")) || ""
-  const phone = phoneRaw.length >= 10 ? phoneRaw.slice(-10) : ""
 
-  const invoiceNo = nextInvoiceNumber()
-  const ts = Date.now()
+  const nameEl = document.getElementById("customer-name");
+  const phoneEl = document.getElementById("customer-phone");
+
+  const customer = (nameEl && nameEl.value.trim()) || "";
+  if (!customer) {
+    alert("Please enter customer / shop name for the bill.");
+    if (nameEl) nameEl.focus();
+    return;
+  }
+
+  const phoneRaw = (phoneEl && phoneEl.value.replace(/\D/g, "")) || "";
+  const phone = phoneRaw.length >= 10 ? phoneRaw.slice(-10) : "";
+
+  const invoiceNo = nextInvoiceNumber();
+  const ts = Date.now();
+
   const items = cart.map((item) => ({
     name: item.name,
     qty: item.qty,
     price: item.price,
     lineTotal: item.qty * item.price,
-  }))
-  const total = items.reduce((s, l) => s + l.lineTotal, 0)
-  const now = new Date()
-  const dateStr = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`
+  }));
 
-  const record = { invoiceNo, ts, customer, phone, items, total }
-  const all = getInvoices()
-  all.push(record)
-  setInvoices(all)
-  commitInvoiceNumber(invoiceNo)
+  const total = items.reduce((s, l) => s + l.lineTotal, 0);
 
+  const now = new Date();
+  const dateStr = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
+
+  const record = { invoiceNo, ts, customer, phone, items, total };
+  const all = getInvoices();
+  all.push(record);
+  setInvoices(all);
+  commitInvoiceNumber(invoiceNo);
+
+  // ✅ STORE FINAL BILL (IMPORTANT FIX)
   window._lastBill = {
     invoiceNo,
     dateStr,
@@ -383,21 +390,86 @@ function generateBill() {
     items,
     total,
     plainText: "",
-  }
-  window._lastBill.plainText = buildBillPlainText(window._lastBill)
+  };
 
-  const preview = document.getElementById("bill-preview")
-  if (preview) preview.innerHTML = buildBillHtml(window._lastBill)
+  window._lastBill.plainText = buildBillPlainText(window._lastBill);
 
-  const modal = document.getElementById("bill-modal")
-  if (modal) modal.classList.add("open")
+  // ✅ SHOW PREVIEW
+  const preview = document.getElementById("bill-preview");
+  if (preview) preview.innerHTML = buildBillHtml(window._lastBill);
 
-  cart = []
-  localStorage.removeItem("cart")
-  displayProducts()
-  displayCart()
+  const modal = document.getElementById("bill-modal");
+  if (modal) modal.classList.add("open");
+
+  // 🔥 NEW: AUTO WHATSAPP
+  sendBillWhatsApp();
+
+  // 🔥 NEW: AUTO PRINT (optional)
+  // directPrintFinalBill();
+
+  // CLEAR CART
+  cart = [];
+  localStorage.removeItem("cart");
+  displayProducts();
+  displayCart();
 }
+async function directPrintFinalBill() {
+  if (!printer || !window._lastBill) {
+    alert("Connect printer & generate bill first");
+    return;
+  }
 
+  let b = window._lastBill;
+
+  // ESC/POS commands
+  const encoder = new TextEncoder();
+  let data = [];
+
+  // INIT PRINTER
+  data.push(0x1B, 0x40);
+
+  // SET ENGLISH CODEPAGE (VERY IMPORTANT FIX)
+  data.push(0x1B, 0x74, 0x00); // CP437
+
+  function addText(text) {
+    data = data.concat(Array.from(encoder.encode(text)));
+  }
+
+  // HEADER
+  addText("DHARNA ENTERPRISE\n");
+  addText("Hanamkonda\n");
+  addText("----------------------\n");
+
+  // BILL INFO
+  addText("Bill No: " + b.invoiceNo + "\n");
+  addText(b.dateStr + "\n");
+
+  // CUSTOMER
+  addText("Name: " + b.customer + "\n");
+  if (b.phone) {
+    addText("Phone: " + b.phone + "\n");
+  }
+
+  addText("----------------------\n");
+
+  // ITEMS
+  b.items.forEach((item) => {
+    let name = cleanText(item.name);
+  
+    addText(name + "\n");
+    addText(item.qty + " x " + item.price + " = " + item.lineTotal + "\n");
+  });
+
+  // TOTAL
+  addText("----------------------\n");
+  addText("TOTAL: Rs " + b.total + "\n");
+
+  // FOOTER
+  addText("Thank You. Visit Again!\n\n\n");
+
+  // PRINT
+  await printer.print(Uint8Array.from(data));
+}
 function buildBillPlainText(b) {
   let t = `${STORE_NAME}\n${STORE_ADDRESS}\nInvoice #${b.invoiceNo}\n${b.dateStr}\nCustomer: ${b.customer}${b.phone ? `\nPhone: ${b.phone}` : ""}\n\n`
   b.items.forEach((line, i) => {
@@ -756,4 +828,124 @@ function sendWhatsApp() {
 // CALL FUNCTION
 function callNow() {
 window.location.href = "tel:8520896231";
+}
+let printer;
+
+// CONNECT PRINTER (one time)
+async function connectPrinter() {
+  try {
+    printer = new WebBluetoothReceiptPrinter();
+    await printer.connect();
+    alert("Printer Connected ✅");
+  } catch (e) {
+    alert("Connection Failed ❌");
+  }
+}
+
+async function directPrintThermal() {
+  if (!printer) {
+    alert("Connect printer first");
+    await connectPrinter();
+    if (!printer) return;
+  }
+
+  if (cart.length === 0) {
+    alert("Cart empty");
+    return;
+  }
+
+  const encoder = new TextEncoder();
+  let data = [];
+
+  function addBytes(bytes) {
+    data = data.concat(bytes);
+  }
+
+  function addText(txt) {
+    addBytes(Array.from(encoder.encode(txt)));
+  }
+
+  function cleanText(text) {
+    return String(text || "").replace(/[^\x00-\x7F]/g, "");
+  }
+
+  function boldOn() {
+    addBytes([0x1B, 0x45, 0x01]); // ESC E 1
+  }
+
+  function boldOff() {
+    addBytes([0x1B, 0x45, 0x00]); // ESC E 0
+  }
+
+  function centerAlign() {
+    addBytes([0x1B, 0x61, 0x01]); // ESC a 1
+  }
+
+  function leftAlign() {
+    addBytes([0x1B, 0x61, 0x00]); // ESC a 0
+  }
+
+  // INIT
+  addBytes([0x1B, 0x40]);      // ESC @
+  addBytes([0x1B, 0x74, 0x00]); // Code page
+
+  // CUSTOMER
+  const nameEl = document.getElementById("customer-name");
+  const phoneEl = document.getElementById("customer-phone");
+
+  const customer = (nameEl && nameEl.value.trim()) || "";
+  const phoneRaw = (phoneEl && phoneEl.value.replace(/\D/g, "")) || "";
+  const phone = phoneRaw.length >= 10 ? phoneRaw.slice(-10) : "";
+
+
+
+  // BILL NO
+  const billNo = nextInvoiceNumber();
+  commitInvoiceNumber(billNo);
+
+  // HEADER
+  centerAlign();
+  addText("DHARNA ENTERPRISE\n");
+  addText("NewShayampet Hanamkonda\n");
+  addText("Tel: 918520896231\n");
+  leftAlign();
+
+  addText("----------------------\n");
+
+  // BILL INFO
+  addText("Bill No: " + billNo + "\n");
+  addText(new Date().toLocaleString() + "\n");
+
+  // CUSTOMER
+  if (customer) addText("Name: " + customer + "\n");
+  if (phone) addText("Phone: " + phone + "\n");
+
+  addText("----------------------\n");
+
+  // ITEMS
+  let total = 0;
+  let totalItems = 0;
+
+  cart.forEach((item) => {
+    const line = item.qty * item.price;
+    total += line;
+    totalItems += item.qty;
+
+    addText(cleanText(item.name) + "\n");
+    addText(item.qty + " x " + item.price + " = " + line + "\n");
+  });
+
+  // TOTAL
+  addText("----------------------\n");
+  addText("Items: " + totalItems + "\n");
+
+  centerAlign();
+  boldOn();
+  addText("TOTAL: Rs " + total + "\n");
+  boldOff();
+
+  // FOOTER
+  addText("Thank You! Visit Again!\n\n\n");
+
+  await printer.print(Uint8Array.from(data));
 }
