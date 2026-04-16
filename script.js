@@ -586,10 +586,11 @@ function sendBillWhatsApp() {
   text += "----------------------\n";
 
   // ITEMS
-  let totalItems = 0;
+  let totalItems = b.items.length;
+  let totalQty = 0;
 
   b.items.forEach((item) => {
-    totalItems += item.qty;
+    totalQty += item.qty;
 
     text += cleanText(item.name) + "\n";
     text += item.qty + " x " + item.price + " = " + item.lineTotal + "\n";
@@ -598,6 +599,7 @@ function sendBillWhatsApp() {
   // TOTAL
   text += "----------------------\n";
   text += "Items: " + totalItems + "\n";
+  text += "Qty: " + totalQty + "\n";
   text += "TOTAL: Rs " + b.total + "\n";
 
   // FOOTER
@@ -642,10 +644,11 @@ function copyBillText() {
   text += "----------------------\n";
 
   // ITEMS
-  let totalItems = 0;
+  let totalItems = b.items.length;
+  let totalQty = 0;
 
   b.items.forEach((item) => {
-    totalItems += item.qty;
+    totalQty += item.qty;
 
     text += cleanText(item.name) + "\n";
     text += item.qty + " x " + item.price + " = " + item.lineTotal + "\n";
@@ -654,6 +657,8 @@ function copyBillText() {
   // TOTAL
   text += "----------------------\n";
   text += "Items: " + totalItems + "\n";
+  text += "Qty: " + totalQty + "\n";
+
   text += "TOTAL: Rs " + b.total + "\n";
 
   // FOOTER
@@ -976,6 +981,14 @@ async function directPrintThermal() {
     addBytes([0x1B, 0x45, 0x00]); // ESC E 0
   }
 
+  function bigTextOn() {
+    addBytes([0x1D, 0x21, 0x11]); // Double height + width
+  }
+  
+  function bigTextOff() {
+    addBytes([0x1D, 0x21, 0x00]); // Normal size
+  }
+
   function centerAlign() {
     addBytes([0x1B, 0x61, 0x01]); // ESC a 1
   }
@@ -1023,12 +1036,13 @@ async function directPrintThermal() {
 
   // ITEMS
   let total = 0;
-  let totalItems = 0;
-
+  let totalQty = 0;
+  let totalItems = cart.length;
+  
   cart.forEach((item) => {
     const line = item.qty * item.price;
     total += line;
-    totalItems += item.qty;
+    totalQty += item.qty;
 
     addText(cleanText(item.name) + "\n");
     addText(item.qty + " x " + item.price + " = " + line + "\n");
@@ -1037,11 +1051,18 @@ async function directPrintThermal() {
   // TOTAL
   addText("----------------------\n");
   addText("Items: " + totalItems + "\n");
+  addText("Qty: " + totalQty + "\n");
 
   centerAlign();
-  boldOn();
-  addText("TOTAL: Rs " + total + "\n");
-  boldOff();
+
+boldOn();
+bigTextOn(); // 🔥 BIG TEXT
+
+addText("TOTAL: Rs " + total + "\n");
+
+bigTextOff(); // 🔥 back to normal
+
+addText("\n");
 
   // FOOTER
   addText("Thank You! Visit Again!\n\n\n");
