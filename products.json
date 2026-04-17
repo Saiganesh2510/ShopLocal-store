@@ -522,7 +522,7 @@
     {
       "id": 1775611657307.6975,
       "name": "American club",
-      "price": 175,
+      "price": 170,
       "stock": 20,
       "image": "https://dukaan.b-cdn.net/700x700/webp/199635/9319472b-6435-463b-8545-1f1a98bbe27b.png",
       "mrp": 200
@@ -562,7 +562,7 @@
     {
       "id": 1775612241692.7722,
       "name": "PowerUP(30bottles)10mrp",
-      "price": 240,
+      "price": 235,
       "stock": 25,
       "image": "https://www.bbassets.com/media/uploads/p/l/40329404_1-campa-power-up.jpg",
       "mrp": 300
@@ -586,7 +586,7 @@
     {
       "id": 1775612459007.6501,
       "name": "campa(30bottles)10MRP",
-      "price": 240,
+      "price": 235,
       "stock": 25,
       "image": "https://nellai.co.in/wp-content/uploads/2025/11/Campa-Lemon-drinks-Rs.10.jpg",
       "mrp": 300
@@ -594,7 +594,7 @@
     {
       "id": 1775612556273.1719,
       "name": "campa ornage(30bottles)10mrp",
-      "price": 240,
+      "price": 235,
       "stock": 25,
       "image": "https://image.cdn.shpy.in/37046/SKU-1843_0-1757512068455.jpg?format=webp",
       "mrp": 300
@@ -650,7 +650,7 @@
     {
       "id": 1775635416644.663,
       "name": "Whisper 50MRP",
-      "price": 42,
+      "price": 40,
       "stock": 50,
       "image": "https://www.bbassets.com/media/uploads/p/l/1200003544_4-whisper-choice-ultra-sanitary-pads-xl.jpg",
       "mrp": 50
@@ -674,7 +674,7 @@
     {
       "id": 1775635416644.3416,
       "name": "Stayfree XL 50MRP",
-      "price": 42,
+      "price": 40,
       "stock": 40,
       "image": "https://images.ctfassets.net/aub2fvcyp2t8/4rn7Kp4MzxrvbD7AucmrCE/e98c674b68e1b1c674b6677c8e055f5c/dryxl18s-en-in",
       "mrp": 50
@@ -1202,7 +1202,7 @@
     {
     "id": 1775964419083.736,
     "name": "Everest Chicken Masala - 5/- (Pack Of 20 )",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://image.cdn.shpy.in/285171/1685737715423_SKU-0316_1.png?width=600&format=webp",
     "mrp": 100
@@ -1210,7 +1210,7 @@
   {
     "id": 1775964543198.185,
     "name": "Everest Garam Masala-5/-(pack of 20)",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440416533/VP/PX/UF/60311052/everest-garam-masala.jpeg",
     "mrp": 100
@@ -1218,7 +1218,7 @@
   {
     "id": 1775964606215.757,
     "name": "Everest Egg Curry Masala-5/-(pack of 20)",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://www.bbassets.com/media/uploads/p/l/40290704_1-everest-everest-egg-curry-masala-m.jpg",
     "mrp": 100
@@ -1226,7 +1226,7 @@
   {
     "id": 1775964661497.0513,
     "name": "Everest Fish Curry Masala-5/-(pack of 20)",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://www.bbassets.com/media/uploads/p/l/40290710_1-everest-everest-fish-curry-masala.jpg",
     "mrp": 100
@@ -1234,7 +1234,7 @@
   {
     "id": 1775964706730.708,
     "name": "Everest Sambar Masala-5/-(pack of 20)",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440417756/ZS/TG/BW/60311052/everest-sambar-masala.jpeg",
     "mrp": 100
@@ -1242,7 +1242,7 @@
   {
     "id": 1775964787847.2876,
     "name": "Everest Meat Masala - 5/- (Pack Of 20 )",
-    "price": 85,
+    "price": 80,
     "stock": 100,
     "image": "https://image.cdn.shpy.in/285171/1685737784666_SKU-0317_1.png?width=600&format=webp",
     "mrp": 100
