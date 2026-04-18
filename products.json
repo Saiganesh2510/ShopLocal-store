@@ -149,7 +149,7 @@
     "price": 50,
     "mrp": 60,
     "image": "https://static.wixstatic.com/media/d0ef24_6e8fd8b459254fb8920c32055bdae668~mv2.jpg/v1/fill/w_280,h_231,q_90,enc_avif,quality_auto/d0ef24_6e8fd8b459254fb8920c32055bdae668~mv2.jpg",
-    "stock": 10
+    "stock": 0
   },
   {
     "id": 1772803503520.0225,
@@ -157,7 +157,7 @@
     "price": 50,
     "mrp": 60,
     "image": "https://dukaan.b-cdn.net/700x700/webp/112370/fee126be-9252-432d-ae53-90fdd110541c.png",
-    "stock": 0
+    "stock": 50
   },
   {
     "id": 1773053482533,
@@ -165,7 +165,7 @@
     "price": 55,
     "mrp": 60,
     "image": "https://hbkirana.in/wp-content/uploads/2025/03/image_19_z4kx-rb_1920x.jpg",
-    "stock": 10
+    "stock": 50
   },
   {
     "id": 1773053929411,
@@ -173,7 +173,15 @@
     "price": 55,
     "mrp": 60,
     "image": "https://www.bbassets.com/media/uploads/p/l/40001672_14-britannia-marie-gold-biscuits-light-crisp-tea-time-snack-no-trans-fat.jpg",
-    "stock": 0
+    "stock": 50
+  },
+  {
+    "id": 1776450560161.1892,
+    "name": "Mom's Magic 5/-",
+    "price": 55,
+    "stock": 100,
+    "image": "https://dms.mydukaan.io/original/jpeg/26970/78d1380c-7ed5-401a-a646-b727b56eadbc.png",
+    "mrp": 60
   },
   {
     "id": 1773044031535,
@@ -1256,22 +1264,6 @@
     "mrp": 200
   },
   {
-    "id": 1776450560161.1892,
-    "name": "Mom's Magic 5/-",
-    "price": 55,
-    "stock": 100,
-    "image": "https://dms.mydukaan.io/original/jpeg/26970/78d1380c-7ed5-401a-a646-b727b56eadbc.png",
-    "mrp": 60
-  },
-  {
-    "id": 1776450717562.5474,
-    "name": "Marie Gold Biscuit 5/-",
-    "price": 55,
-    "stock": 100,
-    "image": "https://5.imimg.com/data5/SELLER/Default/2023/1/QH/WQ/DM/61330193/whatsapp-image-2022-12-31-at-2-54-14-pm-500x500.jpg",
-    "mrp": 60
-  },
-  {
     "id": 1776450794678.382,
     "name": "Deccan Premium Rusk10/-",
     "price": 9,
@@ -1390,14 +1382,6 @@
     "stock": 100,
     "image": "https://5.imimg.com/data5/ANDROID/Default/2025/5/512121711/XA/RZ/OO/11392982/product-jpeg.jpg",
     "mrp": 24
-  },
-  {
-    "id": 1776480207644.7832,
-    "name": "Marie Munch Biscuit5/-",
-    "price": 50,
-    "stock": 20,
-    "image": "https://5.imimg.com/data5/SELLER/Default/2024/3/399061458/RK/OO/DJ/91524673/d51d8d5c-b783-43e9-baaa-94fe604682e5.jpeg",
-    "mrp": 60
   },
   {
     "id": 1776480422094.158,
