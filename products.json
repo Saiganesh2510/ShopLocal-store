@@ -1832,7 +1832,7 @@
     "id": 1776488912058.604,
     "name": "BRISTOL",
     "price": 80,
-    "stock": 0,
+    "stock": 100,
     "image": "https://dukaan.b-cdn.net/1000x1000/webp/616572/7c549302-c9da-49f8-9e4d-ca3f3064acfd.png",
     "mrp": 100
   },
@@ -1840,7 +1840,7 @@
     "id": 1776488996991.304,
     "name": "Edition",
     "price": 140,
-    "stock": 0,
+    "stock": 100,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvahN-lE1sMr1fURqbBfei0vuayA77cI4tA&s",
     "mrp": 180
   },
@@ -1848,7 +1848,7 @@
     "id": 1776490287610.8352,
     "name": "Stellar",
     "price": 80,
-    "stock": 0,
+    "stock": 100,
     "image": "https://godfreyphillips.co.in/public/storage/images/cigrette-images/stellar%20Range%20Pack%20Update%20New_June%2025.png",
     "mrp": 100
   },
