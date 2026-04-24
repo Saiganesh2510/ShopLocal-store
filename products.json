@@ -232,6 +232,30 @@
     "mrp": 30
   },
   {
+    "id": 1777037794849.7976,
+    "name": "Moong Dal5/-(12pcs)",
+    "price": 50,
+    "stock": 100,
+    "image": "https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/m/o/moong_dal_1.jpg",
+    "mrp": 60
+  },
+  {
+    "id": 1777038040414.793,
+    "name": "Hide&seek Fills10/-(16pkts)",
+    "price": 144,
+    "stock": 100,
+    "image": "https://media.assettype.com/foodtechbiz%2F2021-09%2Fc5c1f45f-94e0-4bf8-b500-c72decda38ea%2Fimage001.jpg",
+    "mrp": 160
+  },
+  {
+    "id": 1777038078597.6208,
+    "name": "Hide&seek Fills10/-",
+    "price": 9,
+    "stock": 100,
+    "image": "https://media.assettype.com/foodtechbiz%2F2021-09%2Fc5c1f45f-94e0-4bf8-b500-c72decda38ea%2Fimage001.jpg",
+    "mrp": 10
+  },
+  {
     "id": 1776429688688.8772,
     "name": "ChocoStar",
     "price": 150,
