@@ -741,6 +741,22 @@
     "mrp": 480
   },
   {
+    "id": 1777106525508.9812,
+    "name": "PowerUp 20/-",
+    "price": 16,
+    "stock": 100,
+    "image": "https://www.bbassets.com/media/uploads/p/xl/40329404_1-campa-power-up.jpg",
+    "mrp": 20
+  },
+  {
+    "id": 1777106556890.4128,
+    "name": "Campa 20/-",
+    "price": 16,
+    "stock": 100,
+    "image": "https://cdn.dotpe.in/longtail/store-items/7497834/1B3rgIjm.webp",
+    "mrp": 20
+  },
+  {
     "id": 1775612459007.6501,
     "name": "campa(30bottles)10MRP",
     "price": 235,
@@ -1221,12 +1237,12 @@
     "mrp": 25
   },
   {
-    "id": 1775635416644.1848,
-    "name": "Indica easy hair color 15/-",
-    "price": 12,
-    "stock": 40,
+    "id": 1777106371516.8525,
+    "name": "Indica easy hair color 15/-(10pcs)",
+    "price": 115,
+    "stock": 100,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqbRGFi12ynJ7iuTza5PE9sGU9D2bxApCv2A&s",
-    "mrp": 15
+    "mrp": 150
   },
   {
     "id": 1776587673536.2668,
@@ -1238,7 +1254,7 @@
   },
   {
     "id": 1776587698668.8567,
-    "name": "Indica easy hair color 30/-",
+    "name": "Indica easy hair color 30/-(12pcs)",
     "price": 290,
     "stock": 97,
     "image": "https://www.bbassets.com/media/uploads/p/l/40111097-2_4-indica-easy-hair-colour-natural-black.jpg",
