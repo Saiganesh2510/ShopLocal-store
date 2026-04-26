@@ -1111,7 +1111,7 @@
   {
     "id": 1775635416644.0989,
     "name": "Dove 2/-",
-    "price": 28,
+    "price": 27,
     "stock": 40,
     "image": "https://image.cdn.shpy.in/12350/SKU-7369_0-1723356026765.jpg?width=600&format=webp",
     "mrp": 32
@@ -1127,7 +1127,7 @@
   {
     "id": 1775635416644.4038,
     "name": "Head and shoulder 2/-",
-    "price": 28,
+    "price": 27,
     "stock": 40,
     "image": "https://image.cdn.shpy.in/36037/1622426430345_SKU-0487_0.jpg?width=600&format=webp",
     "mrp": 32
@@ -1135,7 +1135,7 @@
   {
     "id": 1775635416644.7966,
     "name": "Meera/-",
-    "price": 36,
+    "price": 34,
     "stock": 40,
     "image": "https://5.imimg.com/data5/SELLER/Default/2026/3/588000555/II/BO/ME/66042055/img-20250826-wa0008-500x500.jpg",
     "mrp": 40
@@ -1847,7 +1847,7 @@
   {
     "id": 1776488912058.604,
     "name": "BRISTOL",
-    "price": 82,
+    "price": 80,
     "stock": 100,
     "image": "https://dukaan.b-cdn.net/1000x1000/webp/616572/7c549302-c9da-49f8-9e4d-ca3f3064acfd.png",
     "mrp": 100
@@ -1934,8 +1934,15 @@
   {
     "id": 1776706279807.4365,
     "name": "Pan bahar 50pcs pkt",
-    "price": 255,
+    "price": 250,
     "stock": 100,
     "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mypaanshop.com%2Fimage%2Fcache%2Fcatalog%2Fpnb2-1000x1000w.jpg&f=1&nofb=1&ipt=449f3d9131623d58a6c7cf105b2b380acbfe4005ad06c4d48f54cf5fc9cc92c6"
+  },
+  {
+    "id": 1777177784852.1875,
+    "name": "JK(Ratna)",
+    "price": 70,
+    "stock": 100,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzf2BGNHjJUK5ul458JBrjh5sXEBi-6sSonw&s"
   }
 ]
