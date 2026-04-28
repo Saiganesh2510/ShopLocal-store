@@ -1935,9 +1935,17 @@
     "mrp": 60
   },
   {
+    "id": 1777380253513.4883,
+    "name": "gemini 10/-(40pc)",
+    "price": 360,
+    "stock": 100,
+    "image": "https://dms.mydukaan.io/original/jpeg/media/0bc3d93b-54ee-4ec4-96bc-4ff7acdfed48.jpg",
+    "mrp": 400
+  },
+  {
     "id": 1776587778234.017,
     "name": "Gemini10/-(12pcs)",
-    "price": 107,
+    "price": 108,
     "stock": 99,
     "image": "https://dms.mydukaan.io/original/jpeg/media/0bc3d93b-54ee-4ec4-96bc-4ff7acdfed48.jpg",
     "mrp": 120
