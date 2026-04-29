@@ -2185,7 +2185,7 @@
   {
     "id": 1775611527312.152,
     "name": "Kings",
-    "price": 218,
+    "price": 222,
     "stock": 20,
     "image": "https://storage.googleapis.com/shy-pub/18129/1686368960429_SKU-0562_0.webp",
     "mrp": 240
@@ -2201,7 +2201,7 @@
   {
     "id": 1775611657307.6975,
     "name": "American club",
-    "price": 170,
+    "price": 176,
     "stock": 20,
     "image": "https://dukaan.b-cdn.net/700x700/webp/199635/9319472b-6435-463b-8545-1f1a98bbe27b.png",
     "mrp": 200
@@ -2209,7 +2209,7 @@
   {
     "id": 1775611697092.8982,
     "name": "small american club",
-    "price": 105,
+    "price": 106,
     "stock": 20,
     "image": "https://dukaan.b-cdn.net/700x700/webp/199635/9319472b-6435-463b-8545-1f1a98bbe27b.png",
     "mrp": 120
@@ -2249,7 +2249,7 @@
   {
     "id": 1776488996991.304,
     "name": "Edition",
-    "price": 140,
+    "price": 170,
     "stock": 0,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvahN-lE1sMr1fURqbBfei0vuayA77cI4tA&s",
     "mrp": 180
@@ -2257,7 +2257,7 @@
   {
     "id": 1776490287610.8352,
     "name": "Stellar",
-    "price": 80,
+    "price": 90,
     "stock": 0,
     "image": "https://godfreyphillips.co.in/public/storage/images/cigrette-images/stellar%20Range%20Pack%20Update%20New_June%2025.png",
     "mrp": 100
