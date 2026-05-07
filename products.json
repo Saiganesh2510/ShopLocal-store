@@ -312,6 +312,38 @@
     "mrp": 10
   },
   {
+    "id": 1778125715698.2214,
+    "name": "Jassi Badam Milk30/-(24pcs)",
+    "price": 480,
+    "stock": 10,
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT7MrWR0JrXRb4mAoi1yp9oN9GgPD3OeZzz3GKkwx13cKT1Tupv0swd05DCeMM-YGeDNlLLqKGYTjLgWHbTEhrcSE5C6u5_K5Esnh3h39hz9f8fh_OS5lqH-0w",
+    "mrp": 720
+  },
+  {
+    "id": 1778125842188.8506,
+    "name": "High5 10/-(24pcs)",
+    "price": 200,
+    "stock": 10,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPaDLuC_43IR9lltgkGlDUT-8azUekxFVbw&s",
+    "mrp": 240
+  },
+  {
+    "id": 1778125881972.538,
+    "name": "High5 5/-(48pcs)",
+    "price": 200,
+    "stock": 10,
+    "image": "https://media.licdn.com/dms/image/v2/D4D22AQEuYrbqTOcuVA/feedshare-shrink_800/B4DZyZQA7bHAAg-/0/1772097638809?e=2147483647&v=beta&t=6ORLOsjzEtwaRKdtPk1bD2MAg0OyFRLfwTSLVwTQIEE",
+    "mrp": 240
+  },
+  {
+    "id": 1778125922788.0938,
+    "name": "Toffeeman deluxe almond flavoured toffee 5/-",
+    "price": 120,
+    "stock": 10,
+    "image": "https://i.ytimg.com/vi/StlroWslQw0/maxresdefault.jpg",
+    "mrp": 150
+  },
+  {
     "id": 1775400602815.4114,
     "name": "Rusk 10/-",
     "price": 9,
@@ -2390,8 +2422,8 @@
   {
     "id": 1775611880840.8606,
     "name": "Classic connect",
-    "price": 360,
-    "stock": 0,
+    "price": 385,
+    "stock": 100,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4EcxAYekWQc57LcnwnP_wpm8fljUqXXua8Q&s",
     "mrp": 400
   },
