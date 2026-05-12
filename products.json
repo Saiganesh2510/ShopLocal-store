@@ -767,7 +767,7 @@
   {
     "id": 1775612241692.7722,
     "name": "PowerUP(30bottles)10mrp",
-    "price": 240,
+    "price": 250,
     "stock": 25,
     "image": "https://www.bbassets.com/media/uploads/p/l/40329404_1-campa-power-up.jpg",
     "mrp": 300
@@ -807,15 +807,15 @@
   {
     "id": 1775612459007.6501,
     "name": "campa(30bottles)10MRP",
-    "price": 240,
-    "stock": 25,
+    "price": 250,
+    "stock": 0,
     "image": "https://nellai.co.in/wp-content/uploads/2025/11/Campa-Lemon-drinks-Rs.10.jpg",
     "mrp": 300
   },
   {
     "id": 1775612556273.1719,
     "name": "campa ornage(30bottles)10mrp",
-    "price": 240,
+    "price": 250,
     "stock": 25,
     "image": "https://image.cdn.shpy.in/37046/SKU-1843_0-1757512068455.jpg?format=webp",
     "mrp": 300
