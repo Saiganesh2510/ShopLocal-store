@@ -1,4 +1,51 @@
 [
+      {
+    "id": 1777614618520.9612,
+    "name": "Jet(40coils)",
+    "price": 130,
+    "stock": 100,
+    "image": "https://www.bbassets.com/media/uploads/p/l/190029_1-jet-mosquito-coil-jumbo-gold.jpg"
+  },
+  {
+    "id": 1777614713554.6577,
+    "name": "Lux10/-(12pcs)",
+    "price": 110,
+    "stock": 100,
+    "image": "https://dukaan.b-cdn.net/700x700/webp/projecteagle/images/fa6e2369-248f-4c7d-adf1-bd01cb102efd.jpg",
+    "mrp": 120
+  },
+  {
+    "id": 1777614942836.2712,
+    "name": "Maagi7/-(10pcs)",
+    "price": 66,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/ECOM/Default/2024/9/450496965/RB/RH/WF/141449392/maggi-masala-instant-noodles-35-g-quick-pantry.jpg",
+    "mrp": 70
+  },
+  {
+    "id": 1777615096368.764,
+    "name": "TicTac5/-(72n+3extra)",
+    "price": 300,
+    "stock": 12,
+    "image": "https://www.bbassets.com/media/uploads/p/l/40326564_1-tic-tac-mint-orange-flavours.jpg",
+    "mrp": 360
+  },
+  {
+    "id": 1777615337838.264,
+    "name": "Frooti5/-(8pc)",
+    "price": 35,
+    "stock": 100,
+    "image": "https://i.redd.it/nkidqpetsg4d1.jpeg",
+    "mrp": 40
+  },
+  {
+    "id": 1777615406660.6394,
+    "name": "Frooti5/-(64U)",
+    "price": 280,
+    "stock": 100,
+    "image": "https://i.redd.it/nkidqpetsg4d1.jpeg",
+    "mrp": 320
+  },
     {
       "id": 1778487955190.705,
       "name": "Oreo 10/-(12pcs)",
