@@ -24,15 +24,24 @@ window._currentReportPeriod = "daily"
 window._lastBill = null
 window._lastReportContext = null
 
-fetch("products.json")
-  .then((res) => res.json())
-  .then((data) => {
-    products = data
-    loadCart();
-    displayProducts()
-    displayCart()
-    updateCartCount()
-  })
+Promise.all([
+  fetch("products.json").then((res) => res.json()),
+  fetch("product.json").then((res) => res.json())
+])
+.then(([data1, data2]) => {
+
+  // combine both files
+  products = [...data1, ...data2]
+
+  loadCart();
+  displayProducts();
+  displayCart();
+  updateCartCount();
+
+})
+.catch((error) => {
+  console.error("Error loading products:", error);
+});
 
 function getInvoices() {
   try {
