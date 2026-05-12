@@ -753,16 +753,32 @@
   {
     "id": 1776860105308.4148,
     "name": "Tata copper+water 500ml(24Bts)",
-    "price": 180,
+    "price": 190,
     "stock": 100,
     "image": "https://www.bbassets.com/media/uploads/p/l/40230838_5-tata-added-mineral-water-copper-plus-for-immunity-active-lifestyle.jpg"
   },
   {
     "id": 1776861857747.4443,
     "name": "Tata copper+ water 2ltr(9Bts)",
-    "price": 190,
+    "price": 200,
     "stock": 100,
     "image": "https://tiimg.tistatic.com/fp/1/009/787/tata-copper-2-l-bottle-water-461.jpg"
+  },
+   {
+    "id": 1778572461550.8154,
+    "name": "Tata Gluco plus10/-(24pcs)",
+    "price": 190,
+    "stock": 10,
+    "image": "https://www.panchamrutha.com/cdn/shop/files/481971607_982742670621385_7610199043803131054_n.jpg?v=1769262313",
+    "mrp": 240
+  },
+  {
+    "id": 1778572529034.7307,
+    "name": "Tata Gluco plus10/-(24)",
+    "price": 190,
+    "stock": 10,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrMxXXAsSoEkaDn3-Wz9AE0jnrm4peSWAKxQ&s",
+    "mrp": 240
   },
   {
     "id": 1775612241692.7722,
@@ -2538,52 +2554,5 @@
     "stock": 10,
     "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/tzpi19w8lhmorebrbpu6.jpg",
     "mrp": 600
-  },
-  {
-    "id": 1777614618520.9612,
-    "name": "Jet(40coils)",
-    "price": 130,
-    "stock": 100,
-    "image": "https://www.bbassets.com/media/uploads/p/l/190029_1-jet-mosquito-coil-jumbo-gold.jpg"
-  },
-  {
-    "id": 1777614713554.6577,
-    "name": "Lux10/-(12pcs)",
-    "price": 110,
-    "stock": 100,
-    "image": "https://dukaan.b-cdn.net/700x700/webp/projecteagle/images/fa6e2369-248f-4c7d-adf1-bd01cb102efd.jpg",
-    "mrp": 120
-  },
-  {
-    "id": 1777614942836.2712,
-    "name": "Maagi7/-(10pcs)",
-    "price": 66,
-    "stock": 100,
-    "image": "https://5.imimg.com/data5/ECOM/Default/2024/9/450496965/RB/RH/WF/141449392/maggi-masala-instant-noodles-35-g-quick-pantry.jpg",
-    "mrp": 70
-  },
-  {
-    "id": 1777615096368.764,
-    "name": "TicTac5/-(72n+3extra)",
-    "price": 300,
-    "stock": 12,
-    "image": "https://www.bbassets.com/media/uploads/p/l/40326564_1-tic-tac-mint-orange-flavours.jpg",
-    "mrp": 360
-  },
-  {
-    "id": 1777615337838.264,
-    "name": "Frooti5/-(8pc)",
-    "price": 35,
-    "stock": 100,
-    "image": "https://i.redd.it/nkidqpetsg4d1.jpeg",
-    "mrp": 40
-  },
-  {
-    "id": 1777615406660.6394,
-    "name": "Frooti5/-(64U)",
-    "price": 280,
-    "stock": 100,
-    "image": "https://i.redd.it/nkidqpetsg4d1.jpeg",
-    "mrp": 320
   }
   ]
