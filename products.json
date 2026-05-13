@@ -160,6 +160,22 @@
     "mrp": 32
   },
   {
+    "id": 1778635116633.6104,
+    "name": "osmania biscuits2/-(24bts)",
+    "price": 32,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/SB/XW/FK/SELLER-11053655/24-piece-osmania-biscuit-500x500.jpg",
+    "mrp": 48
+  },
+  {
+    "id": 1778635182298.0063,
+    "name": "osmania biscuits5/-(12b)",
+    "price": 40,
+    "stock": 100,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Subhan_osmania_biscuits.jpg",
+    "mrp": 60
+  },
+  {
     "id": 1773053482533,
     "name": "GoodDay Biscuits 5/-(12pcs)",
     "price": 55,
@@ -402,7 +418,7 @@
   {
     "id": 1776451063261.0837,
     "name": "Center Fruit1/-",
-    "price": 200,
+    "price": 195,
     "stock": 20,
     "image": "https://m.media-amazon.com/images/I/51C7ha9i0XL.jpg",
     "mrp": 210
@@ -410,7 +426,7 @@
   {
     "id": 1776478307167.8813,
     "name": "Lollipop 2/-(100pcs)",
-    "price": 140,
+    "price": 130,
     "stock": 3,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd1-1KSnyqQ4eoxaQWz3FZpha3wXNiqbwkWg&s",
     "mrp": 200
@@ -426,7 +442,7 @@
   {
     "id": 1776478663899.6716,
     "name": "Jamun 1/-(170pcs)",
-    "price": 140,
+    "price": 130,
     "stock": 100,
     "image": "https://5.imimg.com/data5/ANDROID/Default/2022/9/OF/BI/LP/40305710/product-jpeg.jpg",
     "mrp": 170
@@ -482,7 +498,7 @@
   {
     "id": 1776480422094.158,
     "name": "Rose Soan papdi 1/-(60pcs)",
-    "price": 50,
+    "price": 45,
     "stock": 20,
     "image": "https://tiimg.tistatic.com/fp/1/007/323/100-purity-preserved-soan-papdi-sweet-318.jpg",
     "mrp": 60
@@ -490,7 +506,7 @@
   {
     "id": 1776480579627.0652,
     "name": "chikki 1/-jar(200pcs)",
-    "price": 160,
+    "price": 150,
     "stock": 30,
     "image": "https://tiimg.tistatic.com/fp/1/008/312/crunchy-tasty-sweet-and-delicious-rectangular-groundnut-chikki-250.jpg",
     "mrp": 200
@@ -498,7 +514,7 @@
   {
     "id": 1776480737110.6343,
     "name": "Chikki jar5/-(60pcs)",
-    "price": 250,
+    "price": 240,
     "stock": 100,
     "image": "https://tiimg.tistatic.com/fp/1/008/312/crunchy-tasty-sweet-and-delicious-rectangular-groundnut-chikki-250.jpg",
     "mrp": 300
@@ -506,7 +522,7 @@
   {
     "id": 1776480870027.2148,
     "name": "Mysore pak5/-(50pcs)",
-    "price": 200,
+    "price": 190,
     "stock": 100,
     "image": "https://5.imimg.com/data5/ANDROID/Default/2021/7/KN/WY/MX/41893079/prod-20210724-2353062007392743144369680-jpg.jpg",
     "mrp": 250
@@ -531,7 +547,7 @@
     "id": 1776481224080.4373,
     "name": "Mango juice2/-(25pcs)",
     "price": 40,
-    "stock": 100,
+    "stock": 0,
     "image": "https://5.imimg.com/data5/SELLER/Default/2024/11/464618124/KI/VT/YU/51113492/whatsapp-image-2024-11-11-at-11-37-02-pm-250x250.jpeg",
     "mrp": 50
   },
@@ -672,6 +688,14 @@
     "mrp": 60
   },
   {
+    "id": 1778637687958.9888,
+    "name": "chatpat gift all types",
+    "price": 50,
+    "stock": 100,
+    "image": "https://i.ytimg.com/vi/AuK2TMnYbyM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAKwpE4QeDmzv6hYf1wUV5aSvvd2w",
+    "mrp": 60
+  },
+  {
     "id": 1773044031535,
     "name": "Thums Up Soft Drink, 2.25",
     "price": 85,
@@ -734,14 +758,6 @@
     "mrp": 160,
     "image": "https://www.bbassets.com/media/uploads/p/l/40204558_2-thums-up-soft-drink.jpg",
     "stock": 10
-  },
-  {
-    "id": 1773055247746,
-    "name": "Kinley Drinking Water - With Minerals, 1 L ",
-    "price": 0,
-    "mrp": 20,
-    "image": "https://www.bbassets.com/media/uploads/p/l/204569-2_4-kinley-mineral-water.jpg",
-    "stock": 0
   },
   {
     "id": 1776859929109.4343,
@@ -1261,6 +1277,22 @@
     "stock": 40,
     "image": "https://image.cdn.shpy.in/36037/1622426430345_SKU-0487_0.jpg?width=600&format=webp",
     "mrp": 32
+  },
+  {
+    "id": 1778637974246.8433,
+    "name": "head&shoulder02/-(20pcs)",
+    "price": 34,
+    "stock": 100,
+    "image": "https://storage.googleapis.com/shy-pub/285171/1686745779137_SKU-0406_0.png",
+    "mrp": 40
+  },
+  {
+    "id": 1778638004195.7544,
+    "name": "head&shoulderG2/-(20pcs)",
+    "price": 34,
+    "stock": 100,
+    "image": "https://image.cdn.shpy.in/285171/1686745981568_SKU-0408_0.png?format=webp",
+    "mrp": 40
   },
   {
     "id": 1775635416644.7966,
@@ -2476,12 +2508,76 @@
     "mrp": 184
   },
   {
+    "id": 1778635794530.4233,
+    "name": "Pamper Lsize30/-(8pcs)",
+    "price": 200,
+    "stock": 100,
+    "image": "https://nagabazaar.com/cdn/shop/files/PAMPERS-Active-Baby-Pants-Large-2-counts-1.jpg?v=1747519329",
+    "mrp": 240
+  },
+  {
     "id": 1775724797756.4714,
     "name": "Pampers XL 38/-(8pcs)",
     "price": 248,
     "stock": 50,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTe8Obr45NgVl_5PJP6HIMmHVCva8KDb2poA&s",
     "mrp": 304
+  },
+  {
+    "id": 1778635455298.5469,
+    "name": "jeera(Jeelakarra) 5/-(50pkts)",
+    "price": 125,
+    "stock": 100,
+    "image": "https://4.imimg.com/data4/IS/ER/ANDROID-23405909/product-500x500.jpeg",
+    "mrp": 250
+  },
+  {
+    "id": 1778635484514.265,
+    "name": "jeera(Jeelakarra) 5/-(10pkts)",
+    "price": 30,
+    "stock": 100,
+    "image": "https://4.imimg.com/data4/IS/ER/ANDROID-23405909/product-500x500.jpeg",
+    "mrp": 50
+  },
+  {
+    "id": 1778640287740.2222,
+    "name": "jeera(Jeelakarra) 10/-",
+    "price": 125,
+    "stock": 100,
+    "image": "https://4.imimg.com/data4/IS/ER/ANDROID-23405909/product-500x500.jpeg",
+    "mrp": 250
+  },
+    {
+    "id": 1778636875894.2708,
+    "name": "kashmiri chilli powder10/-",
+    "price": 80,
+    "stock": 100,
+    "image": "https://assets.hyperpure.com/data/images/products/331a1581814dd7d71de5dc3ed760c8a0.png",
+    "mrp": 100
+  },
+  {
+    "id": 1778636945442.28,
+    "name": "red chilli powder5/-",
+    "price": 80,
+    "stock": 100,
+    "image": "https://i.ytimg.com/vi/-Ce-Y_RIzOU/oardefault.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLD2TfSOigxjJw_w8ZaydDfMQqZNIA&usqp=CCk",
+    "mrp": 100
+  },
+  {
+    "id": 1778637041109.5483,
+    "name": "pasupu(turmeric)powder5/-",
+    "price": 80,
+    "stock": 10,
+    "image": "https://i.ytimg.com/vi/46HnIZXbNtI/oardefault.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLD6Ii_kJOlGDNgb7he1bJQfMQuDmA&usqp=CCk",
+    "mrp": 100
+  },
+  {
+    "id": 1778637102408.854,
+    "name": "Everest Black Pepper Powder10/-",
+    "price": 80,
+    "stock": 100,
+    "image": "https://5.imimg.com/data5/ECOM/Default/2023/7/325031270/TY/VM/ZA/185557558/black-pepper-powder-1683233683468-sku-0568-0-500x500.webp",
+    "mrp": 100
   },
   {
     "id": 1775964419083.736,
