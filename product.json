@@ -58,7 +58,7 @@
   {
     "id": 1779089530174.3237,
     "name": "cycle agarbatti 5 rs",
-    "price": 52,
+    "price": 50,
     "stock": 100,
     "image": "https://cycle.in/cdn/shop/files/3in1-1000x1000_07df39b2-76d8-4a3e-970f-1f94e1c019ff.jpg?v=1723893185",
     "mrp": 60
@@ -382,7 +382,7 @@
   {
     "id": 1775611571126.817,
     "name": "small goldflake",
-    "price": 110,
+    "price": 112,
     "stock": 100,
     "image": "https://storage.googleapis.com/shy-pub/18129/1686368960429_SKU-0562_0.webp",
     "mrp": 120
@@ -438,16 +438,16 @@
   {
     "id": 1776488996991.304,
     "name": "Edition",
-    "price": 170,
+    "price": 166,
     "stock": 100,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvahN-lE1sMr1fURqbBfei0vuayA77cI4tA&s",
     "mrp": 180
   },
   {
     "id": 1776490287610.8352,
-    "name": "Stellar",
+    "name": "Stellar(B)",
     "price": 90,
-    "stock": 0,
+    "stock": 100,
     "image": "https://godfreyphillips.co.in/public/storage/images/cigrette-images/stellar%20Range%20Pack%20Update%20New_June%2025.png",
     "mrp": 100
   },
