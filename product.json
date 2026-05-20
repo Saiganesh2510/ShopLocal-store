@@ -152,9 +152,9 @@
     "id": 1779244092550.4163,
     "name": "Bleaching powder(No 1)",
     "price": 30,
-    "stock": 0,
+    "stock": 100,
     "image": "https://via.placeholder.com/200x200.png?text=Product",
-    "mrp": 50
+    "mrp": 45
   },
   {
     "id": 1779244150897.3633,
