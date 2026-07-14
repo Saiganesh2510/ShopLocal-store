@@ -65,8 +65,8 @@
   },
   {
     "id": 1779089678840.497,
-    "name": "https://m.media-amazon.com/images/I/71ot3cRsHeL._AC_UF1000,1000_QL80_.jpg",
-    "price": 140,
+    "name": "goodknight sticks",
+    "price": 135,
     "stock": 100,
     "image": "https://m.media-amazon.com/images/I/71ot3cRsHeL._AC_UF1000,1000_QL80_.jpg"
   },
@@ -300,14 +300,6 @@
       "mrp": 20
     },
     {
-      "id": 1778488418653.404,
-      "name": "Surfexcel 20/-(12pcs)",
-      "price": 224,
-      "stock": 100,
-      "image": "https://www.bbassets.com/media/uploads/p/l/40019095_5-surf-excel-detergent-bar.jpg",
-      "mrp": 240
-    },
-    {
       "id": 1778488818799.5225,
       "name": "Forcesqureciggerate(same bristol)",
       "price": 79,
@@ -406,7 +398,7 @@
   {
     "id": 1775611746942.5051,
     "name": "Advance(sm)",
-    "price": 106,
+    "price": 105,
     "stock": 20,
     "image": "https://cdn.dotpe.in/longtail/item_thumbnails/8498388/FWmGt3fT-800-800.webp",
     "mrp": 120
@@ -414,7 +406,7 @@
   {
     "id": 1775611832113.4568,
     "name": "Silk",
-    "price": 290,
+    "price": 288,
     "stock": 10,
     "image": "https://dayli.in/cdn/shop/files/IND_CHI_H1_10_003_0_0_2_5.jpg?v=1755888505",
     "mrp": 320
@@ -445,7 +437,7 @@
   },
   {
     "id": 1776490287610.8352,
-    "name": "Stellar(B)",
+    "name": "Edition small",
     "price": 90,
     "stock": 100,
     "image": "https://godfreyphillips.co.in/public/storage/images/cigrette-images/stellar%20Range%20Pack%20Update%20New_June%2025.png",
@@ -522,10 +514,17 @@
     "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mypaanshop.com%2Fimage%2Fcache%2Fcatalog%2Fpnb2-1000x1000w.jpg&f=1&nofb=1&ipt=449f3d9131623d58a6c7cf105b2b380acbfe4005ad06c4d48f54cf5fc9cc92c6"
   },
   {
+      "id": 1778488418653.404,
+      "name": "Baba masala",
+      "price": 65,
+      "stock": 100,
+      "image": "xqdwc",
+    },
+  {
     "id": 1777177784852.1875,
     "name": "-jk",
     "price": 70,
     "stock": 100,
     "image": "11https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzf2BGNHjJUK5ul458JBrjh5sXEBi-6sSonw&s123"
-  }
+  },
   ]
