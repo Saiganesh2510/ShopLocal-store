@@ -518,7 +518,7 @@
       "name": "Baba masala",
       "price": 65,
       "stock": 100,
-      "image": "xqdwc",
+      "image": ""
     },
   {
     "id": 1777177784852.1875,
@@ -526,5 +526,5 @@
     "price": 70,
     "stock": 100,
     "image": "11https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzf2BGNHjJUK5ul458JBrjh5sXEBi-6sSonw&s123"
-  },
+  }
   ]
